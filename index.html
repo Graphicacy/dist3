@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head prefix="og: http://ogp.me/ns#">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta property="og:title" content="New Voters">
+        <meta property="og:image" content="http://sandbox.timeplots.com/viz/new_am_econ/dist/img/margin-map.png">
+        <title>New Voters</title>
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="css/main.2001.css">
+    </head>
+    <body>
+        <svg class="defs"><defs>
+            <g id="slide-background">
+                <rect x="12.684" y="6.333" fill="#FFFFFF" stroke="#BCBEC0" width="212.993" height="26"/>
+                <text transform="matrix(1 0 0 1 11.6831 49.0659)" fill="#414042" font-size="12">0%</text>
+                <text transform="matrix(1 0 0 1 49.1362 49.0659)"><tspan x="9" y="0" fill="#414042" font-size="12">26%</tspan></text>
+                <text transform="matrix(1 0 0 1 198.6279 49.0659)" fill="#414042" font-size="12">100%</text>
+                <text transform="matrix(1 0 0 1 98.6191 49.0659)"><tspan x="0" y="0" fill="#414042" font-size="12">44%</tspan></text>
+                <line fill="none" stroke="#939598" stroke-width="2" stroke-dasharray="2,2" x1="106.721" y1="6.365" x2="106.721" y2="32.365"/>
+                <line fill="none" stroke="#939598" stroke-width="2" stroke-dasharray="2,2" x1="69" y1="6.365" x2="69" y2="32.365"/>
+                </g>
+        </defs></svg>
+        <div class="container">
+            <div class="row">
+                <div class="my-container">
+                    <div class="content">
+
+                        <h1>Between now and 2020, as many as <br><strong>25.6 million Hispanic and Asian voters</strong><br> could join the U.S. electorate.</h1>
+
+                        <div class="shares">
+                            <a class="facebook-intent" href="" target="_blank">
+                                <img src="img/fb.png" alt="Facebook">
+                            </a>
+                            <a class="twitter-intent" href="" target="_blank">
+                                <img src="img/twit.png" alt="Twitter">
+                            </a>
+                            <a class="report" href="http://www.renewoureconomy.org/wp-content/uploads/2014/10/PNAE_Voting_Brief.pdf" target="_blank">see report</a>
+                        </div>
+
+                        <p class="subhead">How will these voters impact election results? That depends on how many of these<br> individuals come out to vote-and how successful each party is at earning their support.</p>
+
+                        <div class="mypanel">
+                            <div class="disable-box"></div>
+                            <h2>Build a scenario to<br> see how these<br> new voters impact<br> presidential elections.</h2>
+                            
+                            <ol>
+                                <li class="choices">
+                                    <div class="check-box elex-year check-box-bordered"></div>
+                                    Select election year
+                                </li>
+                                    <button class="year-button" data-cat="2016">2016</button>
+                                    <button class="year-button" data-cat="2020">2020</button>
+                               
+                                <li class="choices">
+                                <div class="check-box turnout check-box-bordered"></div>
+                                <div class="turnout-blank-box blank-box"></div>
+                                    Select voter turnout
+                                </li>
+                                    <button class="cat-button" data-cat="low">Low</button>
+                                    <button class="cat-button" data-cat="med">Med</button>
+                                    <button class="cat-button" data-cat="high">High</button>
+
+                                <div class="support-level-choice-zone">
+                                   <!--  <div class="check-box"></div> -->
+                                    <div class="support-blank-box blank-box"></div>
+                                    <li class="choices">
+                                        Select percent of Hispanics and Asians supporting the GOP
+                                    </li>
+                                    <div id="slider"></div>
+                                    <p class="slide-splainer rom">Level of support for<br> Mitt Romney in 2012.</p>
+                                </div>
+                                    <p class="slide-splainer bush">Level of<br> support for<br> George W. Bush<br> in 2004.</p>
+                           </ol>
+
+                            <hr>
+
+                            <div id="disable-box-compare"></div>
+                            <button id="old-election">Compare to 2012 results</button>
+
+                        </div>
+                        <div class="map-box">
+                            <div class="gray-map"></div>
+                            <svg class="heat-map"></svg>
+                            <img src="img/heat-map-2012-new-colors.svg" id="heat-map-2012">
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="legend"><p>Percent<br> margin of<br> victory<br> for <span class="dem-color">Dems</span><br> or <span class="gop-color">GOP</span></p></div>
+                        <div class="clearfix"></div>
+
+                        <div id="heat-read-out">
+                            <div class="text-disable-box"></div>
+                            <div class="drop-down-blank-box"></div>
+                            <div id="menu" class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                    <span id="state-name">State level results... <span class="key-state"></span></span><span class="caret"></span>
+                                </button>
+                            </div>
+
+                            <div class="read-out">
+                                <div class="pop-estimates">
+                                    <h3>
+                                        Changes to 
+                                        <span class="year-choice">
+                                            2020 
+                                        </span>
+                                        <span class="read-out-state">Arizona 
+                                        </span><br>
+                                        Asian & Hispanic Population
+                                    </h3>
+
+                                    <p>Will turn 18 <span class="read-out-number" id="age-in-pop"></span></p> 
+                                     
+                                    <p>Will naturalize<span class="read-out-number" id="naturalizing-pop"></span></p> 
+                                    <p>Unregistered voters<span class="read-out-number" id="unregistered-voters"></span></p>
+                                </div>
+
+                                <div class="simulated-elex">
+                                    <h3>
+                                        Simulated 
+                                        <span class="year-choice">
+                                            2020 
+                                        </span>
+                                        <span class="read-out-state"> 
+                                        </span><br> 
+                                        Election Result
+                                    </h3>
+                                    <p>Net new 
+                                        <span class="new-voter-party"></span>
+                                        voters 
+                                        <span class="read-out-number" id="net-dems"></span> 
+                                    </p>
+                                        <div class="temp-gray-box"></div>
+                                        <div class="temp-gray-box"></div>
+                                        <svg id="new-voter-bar"></svg>
+                                    <p>
+                                        <span id="outcome"></span>
+                                        <span id="margin">Obama 2012 win/loss margin</span>
+                                    </p>
+                                </div>
+
+                                <div class="simulated-margin">
+                                    <p class="big-number-hed">
+                                        Estimated 
+                                        <span class="read-out-state"></span>
+                                        <span class="year-choice"></span><br>
+                                        <span id="party"></span>
+                                        Margin
+                                    </p>
+                                    
+                                    <span id="big-number" class="read-out-number">%</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            
+                        </div>
+                    
+
+                        <div class="key-states-zone">
+                            <h3>Explore total number of new voters</h3>
+
+                            <img src="img/down-arrow.png" id="down-arrow">
+                    
+                            <div class="clearfix"></div>
+                            <h2 id="key-state-hed">In 16 states, there could be more new Hispanic and Asian voters by 2020 than decided the 2012 presidential result in the state.</h2>
+
+                            <img src="img/key-state-bars2.png" id="margin-chart">
+                        </div>
+
+                    </div>
+                </div>    
+            </div>
+        </div>   
+
+        <div class="footnotes">
+            <div class="foot-container">
+                <h3>About The Data</h3>
+
+                <p>The new Hispanic and Asian voters detailed here are made up of newly naturalized immigrants, Hispanic and Asian citizens turning age 18, and individuals who were eligible but not registered to vote in 2012.</p>
+
+                <p>In the customizable scenario, "LOW" turnout is equivalent to the Hispanic and Asian voter turnout in 2012 and "HIGH" turnout is equivalent to the white voter turnout in 2012.</p>
+
+                <p>The slider reflects the national level of support for Republicans in 2016 or 2020. Our model assigns varying levels of support to individual states, based on how much more or less they supported Republicans than the national average in 2012.</p>
+            </div>
+            <div class="clearfix"></div>    
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        
+        <script src="js/scripts.c424.js"></script>
+    </body>
+</html>
+
+

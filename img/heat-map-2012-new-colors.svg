@@ -1,0 +1,877 @@
+<svg class="heat-map" width="675" height="420" xmlns="http://www.w3.org/2000/svg"><defs xmlns="http://www.w3.org/1999/xhtml"><style type="text/css"><![CDATA[
+html { font-family: sans-serif; }
+body { margin: 0px; }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+audio, canvas, progress, video { display: inline-block; vertical-align: baseline; }
+audio:not([controls]) { display: none; height: 0px; }
+[hidden], template { display: none; }
+a { background-color: transparent; }
+a:active, a:hover { outline: 0px; }
+abbr[title] { border-bottom-width: 1px; border-bottom-style: dotted; }
+b, strong { font-weight: bold; }
+dfn { font-style: italic; }
+h1 { margin: 0.67em 0px; font-size: 2em; }
+mark { color: rgb(0, 0, 0); background: rgb(255, 255, 0); }
+small { font-size: 80%; }
+sub, sup { position: relative; font-size: 75%; line-height: 0; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0px; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 1em 40px; }
+hr { height: 0px; box-sizing: content-box; }
+pre { overflow: auto; }
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+button, input, optgroup, select, textarea { margin: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; color: inherit; }
+button { overflow: visible; }
+button, select { text-transform: none; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+button[disabled], html input[disabled] { cursor: default; }
+input { line-height: normal; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0px; }
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
+input[type="search"] { box-sizing: content-box; -webkit-appearance: textfield; }
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+fieldset { padding: 0.35em 0.625em 0.75em; margin: 0px 2px; border: 1px solid rgb(192, 192, 192); }
+legend { padding: 0px; border: 0px; }
+textarea { overflow: auto; }
+optgroup { font-weight: bold; }
+table { border-spacing: 0px; border-collapse: collapse; }
+td, th { padding: 0px; }
+.glyphicon { position: relative; top: 1px; display: inline-block; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; }
+.glyphicon-asterisk::before { content: '*'; }
+.glyphicon-plus::before { content: '+'; }
+.glyphicon-euro::before, .glyphicon-eur::before { content: '€'; }
+.glyphicon-minus::before { content: '−'; }
+.glyphicon-cloud::before { content: '☁'; }
+.glyphicon-envelope::before { content: '✉'; }
+.glyphicon-pencil::before { content: '✏'; }
+.glyphicon-glass::before { content: ''; }
+.glyphicon-music::before { content: ''; }
+.glyphicon-search::before { content: ''; }
+.glyphicon-heart::before { content: ''; }
+.glyphicon-star::before { content: ''; }
+.glyphicon-star-empty::before { content: ''; }
+.glyphicon-user::before { content: ''; }
+.glyphicon-film::before { content: ''; }
+.glyphicon-th-large::before { content: ''; }
+.glyphicon-th::before { content: ''; }
+.glyphicon-th-list::before { content: ''; }
+.glyphicon-ok::before { content: ''; }
+.glyphicon-remove::before { content: ''; }
+.glyphicon-zoom-in::before { content: ''; }
+.glyphicon-zoom-out::before { content: ''; }
+.glyphicon-off::before { content: ''; }
+.glyphicon-signal::before { content: ''; }
+.glyphicon-cog::before { content: ''; }
+.glyphicon-trash::before { content: ''; }
+.glyphicon-home::before { content: ''; }
+.glyphicon-file::before { content: ''; }
+.glyphicon-time::before { content: ''; }
+.glyphicon-road::before { content: ''; }
+.glyphicon-download-alt::before { content: ''; }
+.glyphicon-download::before { content: ''; }
+.glyphicon-upload::before { content: ''; }
+.glyphicon-inbox::before { content: ''; }
+.glyphicon-play-circle::before { content: ''; }
+.glyphicon-repeat::before { content: ''; }
+.glyphicon-refresh::before { content: ''; }
+.glyphicon-list-alt::before { content: ''; }
+.glyphicon-lock::before { content: ''; }
+.glyphicon-flag::before { content: ''; }
+.glyphicon-headphones::before { content: ''; }
+.glyphicon-volume-off::before { content: ''; }
+.glyphicon-volume-down::before { content: ''; }
+.glyphicon-volume-up::before { content: ''; }
+.glyphicon-qrcode::before { content: ''; }
+.glyphicon-barcode::before { content: ''; }
+.glyphicon-tag::before { content: ''; }
+.glyphicon-tags::before { content: ''; }
+.glyphicon-book::before { content: ''; }
+.glyphicon-bookmark::before { content: ''; }
+.glyphicon-print::before { content: ''; }
+.glyphicon-camera::before { content: ''; }
+.glyphicon-font::before { content: ''; }
+.glyphicon-bold::before { content: ''; }
+.glyphicon-italic::before { content: ''; }
+.glyphicon-text-height::before { content: ''; }
+.glyphicon-text-width::before { content: ''; }
+.glyphicon-align-left::before { content: ''; }
+.glyphicon-align-center::before { content: ''; }
+.glyphicon-align-right::before { content: ''; }
+.glyphicon-align-justify::before { content: ''; }
+.glyphicon-list::before { content: ''; }
+.glyphicon-indent-left::before { content: ''; }
+.glyphicon-indent-right::before { content: ''; }
+.glyphicon-facetime-video::before { content: ''; }
+.glyphicon-picture::before { content: ''; }
+.glyphicon-map-marker::before { content: ''; }
+.glyphicon-adjust::before { content: ''; }
+.glyphicon-tint::before { content: ''; }
+.glyphicon-edit::before { content: ''; }
+.glyphicon-share::before { content: ''; }
+.glyphicon-check::before { content: ''; }
+.glyphicon-move::before { content: ''; }
+.glyphicon-step-backward::before { content: ''; }
+.glyphicon-fast-backward::before { content: ''; }
+.glyphicon-backward::before { content: ''; }
+.glyphicon-play::before { content: ''; }
+.glyphicon-pause::before { content: ''; }
+.glyphicon-stop::before { content: ''; }
+.glyphicon-forward::before { content: ''; }
+.glyphicon-fast-forward::before { content: ''; }
+.glyphicon-step-forward::before { content: ''; }
+.glyphicon-eject::before { content: ''; }
+.glyphicon-chevron-left::before { content: ''; }
+.glyphicon-chevron-right::before { content: ''; }
+.glyphicon-plus-sign::before { content: ''; }
+.glyphicon-minus-sign::before { content: ''; }
+.glyphicon-remove-sign::before { content: ''; }
+.glyphicon-ok-sign::before { content: ''; }
+.glyphicon-question-sign::before { content: ''; }
+.glyphicon-info-sign::before { content: ''; }
+.glyphicon-screenshot::before { content: ''; }
+.glyphicon-remove-circle::before { content: ''; }
+.glyphicon-ok-circle::before { content: ''; }
+.glyphicon-ban-circle::before { content: ''; }
+.glyphicon-arrow-left::before { content: ''; }
+.glyphicon-arrow-right::before { content: ''; }
+.glyphicon-arrow-up::before { content: ''; }
+.glyphicon-arrow-down::before { content: ''; }
+.glyphicon-share-alt::before { content: ''; }
+.glyphicon-resize-full::before { content: ''; }
+.glyphicon-resize-small::before { content: ''; }
+.glyphicon-exclamation-sign::before { content: ''; }
+.glyphicon-gift::before { content: ''; }
+.glyphicon-leaf::before { content: ''; }
+.glyphicon-fire::before { content: ''; }
+.glyphicon-eye-open::before { content: ''; }
+.glyphicon-eye-close::before { content: ''; }
+.glyphicon-warning-sign::before { content: ''; }
+.glyphicon-plane::before { content: ''; }
+.glyphicon-calendar::before { content: ''; }
+.glyphicon-random::before { content: ''; }
+.glyphicon-comment::before { content: ''; }
+.glyphicon-magnet::before { content: ''; }
+.glyphicon-chevron-up::before { content: ''; }
+.glyphicon-chevron-down::before { content: ''; }
+.glyphicon-retweet::before { content: ''; }
+.glyphicon-shopping-cart::before { content: ''; }
+.glyphicon-folder-close::before { content: ''; }
+.glyphicon-folder-open::before { content: ''; }
+.glyphicon-resize-vertical::before { content: ''; }
+.glyphicon-resize-horizontal::before { content: ''; }
+.glyphicon-hdd::before { content: ''; }
+.glyphicon-bullhorn::before { content: ''; }
+.glyphicon-bell::before { content: ''; }
+.glyphicon-certificate::before { content: ''; }
+.glyphicon-thumbs-up::before { content: ''; }
+.glyphicon-thumbs-down::before { content: ''; }
+.glyphicon-hand-right::before { content: ''; }
+.glyphicon-hand-left::before { content: ''; }
+.glyphicon-hand-up::before { content: ''; }
+.glyphicon-hand-down::before { content: ''; }
+.glyphicon-circle-arrow-right::before { content: ''; }
+.glyphicon-circle-arrow-left::before { content: ''; }
+.glyphicon-circle-arrow-up::before { content: ''; }
+.glyphicon-circle-arrow-down::before { content: ''; }
+.glyphicon-globe::before { content: ''; }
+.glyphicon-wrench::before { content: ''; }
+.glyphicon-tasks::before { content: ''; }
+.glyphicon-filter::before { content: ''; }
+.glyphicon-briefcase::before { content: ''; }
+.glyphicon-fullscreen::before { content: ''; }
+.glyphicon-dashboard::before { content: ''; }
+.glyphicon-paperclip::before { content: ''; }
+.glyphicon-heart-empty::before { content: ''; }
+.glyphicon-link::before { content: ''; }
+.glyphicon-phone::before { content: ''; }
+.glyphicon-pushpin::before { content: ''; }
+.glyphicon-usd::before { content: ''; }
+.glyphicon-gbp::before { content: ''; }
+.glyphicon-sort::before { content: ''; }
+.glyphicon-sort-by-alphabet::before { content: ''; }
+.glyphicon-sort-by-alphabet-alt::before { content: ''; }
+.glyphicon-sort-by-order::before { content: ''; }
+.glyphicon-sort-by-order-alt::before { content: ''; }
+.glyphicon-sort-by-attributes::before { content: ''; }
+.glyphicon-sort-by-attributes-alt::before { content: ''; }
+.glyphicon-unchecked::before { content: ''; }
+.glyphicon-expand::before { content: ''; }
+.glyphicon-collapse-down::before { content: ''; }
+.glyphicon-collapse-up::before { content: ''; }
+.glyphicon-log-in::before { content: ''; }
+.glyphicon-flash::before { content: ''; }
+.glyphicon-log-out::before { content: ''; }
+.glyphicon-new-window::before { content: ''; }
+.glyphicon-record::before { content: ''; }
+.glyphicon-save::before { content: ''; }
+.glyphicon-open::before { content: ''; }
+.glyphicon-saved::before { content: ''; }
+.glyphicon-import::before { content: ''; }
+.glyphicon-export::before { content: ''; }
+.glyphicon-send::before { content: ''; }
+.glyphicon-floppy-disk::before { content: ''; }
+.glyphicon-floppy-saved::before { content: ''; }
+.glyphicon-floppy-remove::before { content: ''; }
+.glyphicon-floppy-save::before { content: ''; }
+.glyphicon-floppy-open::before { content: ''; }
+.glyphicon-credit-card::before { content: ''; }
+.glyphicon-transfer::before { content: ''; }
+.glyphicon-cutlery::before { content: ''; }
+.glyphicon-header::before { content: ''; }
+.glyphicon-compressed::before { content: ''; }
+.glyphicon-earphone::before { content: ''; }
+.glyphicon-phone-alt::before { content: ''; }
+.glyphicon-tower::before { content: ''; }
+.glyphicon-stats::before { content: ''; }
+.glyphicon-sd-video::before { content: ''; }
+.glyphicon-hd-video::before { content: ''; }
+.glyphicon-subtitles::before { content: ''; }
+.glyphicon-sound-stereo::before { content: ''; }
+.glyphicon-sound-dolby::before { content: ''; }
+.glyphicon-sound-5-1::before { content: ''; }
+.glyphicon-sound-6-1::before { content: ''; }
+.glyphicon-sound-7-1::before { content: ''; }
+.glyphicon-copyright-mark::before { content: ''; }
+.glyphicon-registration-mark::before { content: ''; }
+.glyphicon-cloud-download::before { content: ''; }
+.glyphicon-cloud-upload::before { content: ''; }
+.glyphicon-tree-conifer::before { content: ''; }
+.glyphicon-tree-deciduous::before { content: ''; }
+* { box-sizing: border-box; }
+::before, ::after { box-sizing: border-box; }
+html { font-size: 10px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.42857143; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); }
+input, button, select, textarea { font-family: inherit; font-size: inherit; line-height: inherit; }
+a { color: rgb(66, 139, 202); text-decoration: none; }
+a:hover, a:focus { color: rgb(42, 100, 150); text-decoration: underline; }
+a:focus { outline: -webkit-focus-ring-color auto 5px; outline-offset: -2px; }
+figure { margin: 0px; }
+img { vertical-align: middle; }
+.img-rounded { border-radius: 6px; }
+.img-thumbnail { display: inline-block; max-width: 100%; height: auto; padding: 4px; line-height: 1.42857143; border: 1px solid rgb(221, 221, 221); border-radius: 4px; transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; background-color: rgb(255, 255, 255); }
+.img-circle { border-radius: 50%; }
+hr { margin-top: 20px; margin-bottom: 20px; border-width: 1px 0px 0px; border-top-style: solid; border-top-color: rgb(238, 238, 238); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px 0px 0px 0px); border: 0px; }
+.sr-only-focusable:active, .sr-only-focusable:focus { position: static; width: auto; height: auto; margin: 0px; overflow: visible; clip: auto; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; }
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small { font-weight: normal; line-height: 1; color: rgb(119, 119, 119); }
+h1, .h1, h2, .h2, h3, .h3 { margin-top: 20px; margin-bottom: 10px; }
+h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small { font-size: 65%; }
+h4, .h4, h5, .h5, h6, .h6 { margin-top: 10px; margin-bottom: 10px; }
+h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small, h4 .small, .h4 .small, h5 .small, .h5 .small, h6 .small, .h6 .small { font-size: 75%; }
+h1, .h1 { font-size: 36px; }
+h2, .h2 { font-size: 30px; }
+h3, .h3 { font-size: 24px; }
+h4, .h4 { font-size: 18px; }
+h5, .h5 { font-size: 14px; }
+h6, .h6 { font-size: 12px; }
+p { margin: 0px 0px 10px; }
+.lead { margin-bottom: 20px; font-size: 16px; font-weight: 300; line-height: 1.4; }
+small, .small { font-size: 85%; }
+mark, .mark { padding: 0.2em; background-color: rgb(252, 248, 227); }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+.text-nowrap { white-space: nowrap; }
+.text-lowercase { text-transform: lowercase; }
+.text-uppercase { text-transform: uppercase; }
+.text-capitalize { text-transform: capitalize; }
+.text-muted { color: rgb(119, 119, 119); }
+.text-primary { color: rgb(66, 139, 202); }
+a.text-primary:hover { color: rgb(48, 113, 169); }
+.text-success { color: rgb(60, 118, 61); }
+a.text-success:hover { color: rgb(43, 84, 44); }
+.text-info { color: rgb(49, 112, 143); }
+a.text-info:hover { color: rgb(36, 82, 105); }
+.text-warning { color: rgb(138, 109, 59); }
+a.text-warning:hover { color: rgb(102, 81, 44); }
+.text-danger { color: rgb(169, 68, 66); }
+a.text-danger:hover { color: rgb(132, 53, 52); }
+.bg-primary { color: rgb(255, 255, 255); background-color: rgb(66, 139, 202); }
+a.bg-primary:hover { background-color: rgb(48, 113, 169); }
+.bg-success { background-color: rgb(223, 240, 216); }
+a.bg-success:hover { background-color: rgb(193, 226, 179); }
+.bg-info { background-color: rgb(217, 237, 247); }
+a.bg-info:hover { background-color: rgb(175, 217, 238); }
+.bg-warning { background-color: rgb(252, 248, 227); }
+a.bg-warning:hover { background-color: rgb(247, 236, 181); }
+.bg-danger { background-color: rgb(242, 222, 222); }
+a.bg-danger:hover { background-color: rgb(228, 185, 185); }
+.page-header { padding-bottom: 9px; margin: 40px 0px 20px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+ul, ol { margin-top: 0px; margin-bottom: 10px; }
+ul ul, ol ul, ul ol, ol ol { margin-bottom: 0px; }
+.list-unstyled { padding-left: 0px; list-style: none; }
+.list-inline { padding-left: 0px; margin-left: -5px; list-style: none; }
+dl { margin-top: 0px; margin-bottom: 20px; }
+dt, dd { line-height: 1.42857143; }
+dt { font-weight: bold; }
+dd { margin-left: 0px; }
+abbr[title], abbr[data-original-title] { cursor: help; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(119, 119, 119); }
+.initialism { font-size: 90%; text-transform: uppercase; }
+blockquote { padding: 10px 20px; margin: 0px 0px 20px; font-size: 17.5px; border-left-width: 5px; border-left-style: solid; border-left-color: rgb(238, 238, 238); }
+blockquote p:last-child, blockquote ul:last-child, blockquote ol:last-child { margin-bottom: 0px; }
+blockquote footer, blockquote small, blockquote .small { display: block; font-size: 80%; line-height: 1.42857143; color: rgb(119, 119, 119); }
+blockquote footer::before, blockquote small::before, blockquote .small::before { content: '— '; }
+.blockquote-reverse, blockquote.pull-right { padding-right: 15px; padding-left: 0px; text-align: right; border-right-width: 5px; border-right-style: solid; border-right-color: rgb(238, 238, 238); border-left-width: 0px; }
+.blockquote-reverse footer::before, blockquote.pull-right footer::before, .blockquote-reverse small::before, blockquote.pull-right small::before, .blockquote-reverse .small::before, blockquote.pull-right .small::before { content: ''; }
+.blockquote-reverse footer::after, blockquote.pull-right footer::after, .blockquote-reverse small::after, blockquote.pull-right small::after, .blockquote-reverse .small::after, blockquote.pull-right .small::after { content: ' —'; }
+address { margin-bottom: 20px; font-style: normal; line-height: 1.42857143; }
+code, kbd, pre, samp { font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; }
+code { padding: 2px 4px; font-size: 90%; color: rgb(199, 37, 78); border-radius: 4px; background-color: rgb(249, 242, 244); }
+kbd { padding: 2px 4px; font-size: 90%; color: rgb(255, 255, 255); border-radius: 3px; -webkit-box-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px inset; box-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px inset; background-color: rgb(51, 51, 51); }
+kbd kbd { padding: 0px; font-size: 100%; font-weight: bold; -webkit-box-shadow: none; box-shadow: none; }
+pre { display: block; padding: 9.5px; margin: 0px 0px 10px; font-size: 13px; line-height: 1.42857143; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); border-radius: 4px; background-color: rgb(245, 245, 245); }
+pre code { padding: 0px; font-size: inherit; color: inherit; white-space: pre-wrap; border-radius: 0px; background-color: transparent; }
+.pre-scrollable { max-height: 340px; overflow-y: scroll; }
+.container { padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; }
+.container-fluid { padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; }
+.row { margin-right: -15px; margin-left: -15px; }
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 { position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; }
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 { float: left; }
+.col-xs-12 { width: 100%; }
+.col-xs-11 { width: 91.66666667%; }
+.col-xs-10 { width: 83.33333333%; }
+.col-xs-9 { width: 75%; }
+.col-xs-8 { width: 66.66666667%; }
+.col-xs-7 { width: 58.33333333%; }
+.col-xs-6 { width: 50%; }
+.col-xs-5 { width: 41.66666667%; }
+.col-xs-4 { width: 33.33333333%; }
+.col-xs-3 { width: 25%; }
+.col-xs-2 { width: 16.66666667%; }
+.col-xs-1 { width: 8.33333333%; }
+.col-xs-pull-12 { right: 100%; }
+.col-xs-pull-11 { right: 91.66666667%; }
+.col-xs-pull-10 { right: 83.33333333%; }
+.col-xs-pull-9 { right: 75%; }
+.col-xs-pull-8 { right: 66.66666667%; }
+.col-xs-pull-7 { right: 58.33333333%; }
+.col-xs-pull-6 { right: 50%; }
+.col-xs-pull-5 { right: 41.66666667%; }
+.col-xs-pull-4 { right: 33.33333333%; }
+.col-xs-pull-3 { right: 25%; }
+.col-xs-pull-2 { right: 16.66666667%; }
+.col-xs-pull-1 { right: 8.33333333%; }
+.col-xs-pull-0 { right: auto; }
+.col-xs-push-12 { left: 100%; }
+.col-xs-push-11 { left: 91.66666667%; }
+.col-xs-push-10 { left: 83.33333333%; }
+.col-xs-push-9 { left: 75%; }
+.col-xs-push-8 { left: 66.66666667%; }
+.col-xs-push-7 { left: 58.33333333%; }
+.col-xs-push-6 { left: 50%; }
+.col-xs-push-5 { left: 41.66666667%; }
+.col-xs-push-4 { left: 33.33333333%; }
+.col-xs-push-3 { left: 25%; }
+.col-xs-push-2 { left: 16.66666667%; }
+.col-xs-push-1 { left: 8.33333333%; }
+.col-xs-push-0 { left: auto; }
+.col-xs-offset-12 { margin-left: 100%; }
+.col-xs-offset-11 { margin-left: 91.66666667%; }
+.col-xs-offset-10 { margin-left: 83.33333333%; }
+.col-xs-offset-9 { margin-left: 75%; }
+.col-xs-offset-8 { margin-left: 66.66666667%; }
+.col-xs-offset-7 { margin-left: 58.33333333%; }
+.col-xs-offset-6 { margin-left: 50%; }
+.col-xs-offset-5 { margin-left: 41.66666667%; }
+.col-xs-offset-4 { margin-left: 33.33333333%; }
+.col-xs-offset-3 { margin-left: 25%; }
+.col-xs-offset-2 { margin-left: 16.66666667%; }
+.col-xs-offset-1 { margin-left: 8.33333333%; }
+.col-xs-offset-0 { margin-left: 0px; }
+table { background-color: transparent; }
+caption { padding-top: 8px; padding-bottom: 8px; color: rgb(119, 119, 119); text-align: left; }
+th { text-align: left; }
+.table { width: 100%; max-width: 100%; margin-bottom: 20px; }
+.table .table { background-color: rgb(255, 255, 255); }
+.table-bordered { border: 1px solid rgb(221, 221, 221); }
+table col[class*="col-"] { position: static; display: table-column; float: none; }
+table td[class*="col-"], table th[class*="col-"] { position: static; display: table-cell; float: none; }
+.table-responsive { min-height: 0.01%; overflow-x: auto; }
+fieldset { min-width: 0px; padding: 0px; margin: 0px; border: 0px; }
+legend { display: block; width: 100%; padding: 0px; margin-bottom: 20px; font-size: 21px; line-height: inherit; color: rgb(51, 51, 51); border-width: 0px 0px 1px; border-bottom-style: solid; border-bottom-color: rgb(229, 229, 229); }
+label { display: inline-block; max-width: 100%; margin-bottom: 5px; font-weight: bold; }
+input[type="search"] { box-sizing: border-box; }
+input[type="radio"], input[type="checkbox"] { margin: 4px 0px 0px; line-height: normal; }
+input[type="file"] { display: block; }
+input[type="range"] { display: block; width: 100%; }
+select[multiple], select[size] { height: auto; }
+input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus { outline: -webkit-focus-ring-color auto 5px; outline-offset: -2px; }
+output { display: block; padding-top: 7px; font-size: 14px; line-height: 1.42857143; color: rgb(85, 85, 85); }
+.form-control { display: block; width: 100%; height: 34px; padding: 6px 12px; font-size: 14px; line-height: 1.42857143; color: rgb(85, 85, 85); border: 1px solid rgb(204, 204, 204); border-radius: 4px; -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset; box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; background-image: none; background-color: rgb(255, 255, 255); }
+.form-control:focus { border-color: rgb(102, 175, 233); outline: 0px; -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset, rgba(102, 175, 233, 0.6) 0px 0px 8px; box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset, rgba(102, 175, 233, 0.6) 0px 0px 8px; }
+.form-control::-webkit-input-placeholder { color: rgb(153, 153, 153); }
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control { cursor: not-allowed; opacity: 1; background-color: rgb(238, 238, 238); }
+textarea.form-control { height: auto; }
+input[type="search"] { -webkit-appearance: none; }
+input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"] { line-height: 34px; }
+input[type="date"].input-sm, input[type="time"].input-sm, input[type="datetime-local"].input-sm, input[type="month"].input-sm { line-height: 30px; }
+input[type="date"].input-lg, input[type="time"].input-lg, input[type="datetime-local"].input-lg, input[type="month"].input-lg { line-height: 46px; }
+.form-group { margin-bottom: 15px; }
+.radio, .checkbox { position: relative; display: block; margin-top: 10px; margin-bottom: 10px; }
+.radio label, .checkbox label { min-height: 20px; padding-left: 20px; margin-bottom: 0px; font-weight: normal; cursor: pointer; }
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] { position: absolute; margin-left: -20px; }
+.radio + .radio, .checkbox + .checkbox { margin-top: -5px; }
+.radio-inline, .checkbox-inline { display: inline-block; padding-left: 20px; margin-bottom: 0px; font-weight: normal; vertical-align: middle; cursor: pointer; }
+.radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline { margin-top: 0px; margin-left: 10px; }
+input[type="radio"][disabled], input[type="checkbox"][disabled], input[type="radio"].disabled, input[type="checkbox"].disabled, fieldset[disabled] input[type="radio"], fieldset[disabled] input[type="checkbox"] { cursor: not-allowed; }
+.radio-inline.disabled, .checkbox-inline.disabled, fieldset[disabled] .radio-inline, fieldset[disabled] .checkbox-inline { cursor: not-allowed; }
+.radio.disabled label, .checkbox.disabled label, fieldset[disabled] .radio label, fieldset[disabled] .checkbox label { cursor: not-allowed; }
+.form-control-static { padding-top: 7px; padding-bottom: 7px; margin-bottom: 0px; }
+.form-control-static.input-lg, .form-control-static.input-sm { padding-right: 0px; padding-left: 0px; }
+.input-sm, .form-group-sm .form-control { height: 30px; padding: 5px 10px; font-size: 12px; line-height: 1.5; border-radius: 3px; }
+select.input-sm, select.form-group-sm .form-control { height: 30px; line-height: 30px; }
+textarea.input-sm, textarea.form-group-sm .form-control, select[multiple].input-sm, select[multiple].form-group-sm .form-control { height: auto; }
+.input-lg, .form-group-lg .form-control { height: 46px; padding: 10px 16px; font-size: 18px; line-height: 1.33; border-radius: 6px; }
+select.input-lg, select.form-group-lg .form-control { height: 46px; line-height: 46px; }
+textarea.input-lg, textarea.form-group-lg .form-control, select[multiple].input-lg, select[multiple].form-group-lg .form-control { height: auto; }
+.has-feedback { position: relative; }
+.has-feedback .form-control { padding-right: 42.5px; }
+.form-control-feedback { position: absolute; top: 0px; right: 0px; z-index: 2; display: block; width: 34px; height: 34px; line-height: 34px; text-align: center; pointer-events: none; }
+.input-lg + .form-control-feedback { width: 46px; height: 46px; line-height: 46px; }
+.input-sm + .form-control-feedback { width: 30px; height: 30px; line-height: 30px; }
+.has-success .help-block, .has-success .control-label, .has-success .radio, .has-success .checkbox, .has-success .radio-inline, .has-success .checkbox-inline, .has-success.radio label, .has-success.checkbox label, .has-success.radio-inline label, .has-success.checkbox-inline label { color: rgb(60, 118, 61); }
+.has-success .form-control { border-color: rgb(60, 118, 61); -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset; box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset; }
+.has-success .form-control:focus { border-color: rgb(43, 84, 44); -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset, rgb(103, 177, 104) 0px 0px 6px; box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset, rgb(103, 177, 104) 0px 0px 6px; }
+.has-success .input-group-addon { color: rgb(60, 118, 61); border-color: rgb(60, 118, 61); background-color: rgb(223, 240, 216); }
+.has-success .form-control-feedback { color: rgb(60, 118, 61); }
+.has-warning .help-block, .has-warning .control-label, .has-warning .radio, .has-warning .checkbox, .has-warning .radio-inline, .has-warning .checkbox-inline, .has-warning.radio label, .has-warning.checkbox label, .has-warning.radio-inline label, .has-warning.checkbox-inline label { color: rgb(138, 109, 59); }
+.has-warning .form-control { border-color: rgb(138, 109, 59); -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset; box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset; }
+.has-warning .form-control:focus { border-color: rgb(102, 81, 44); -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset, rgb(192, 161, 107) 0px 0px 6px; box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset, rgb(192, 161, 107) 0px 0px 6px; }
+.has-warning .input-group-addon { color: rgb(138, 109, 59); border-color: rgb(138, 109, 59); background-color: rgb(252, 248, 227); }
+.has-warning .form-control-feedback { color: rgb(138, 109, 59); }
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label { color: rgb(169, 68, 66); }
+.has-error .form-control { border-color: rgb(169, 68, 66); -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset; box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset; }
+.has-error .form-control:focus { border-color: rgb(132, 53, 52); -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset, rgb(206, 132, 131) 0px 0px 6px; box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset, rgb(206, 132, 131) 0px 0px 6px; }
+.has-error .input-group-addon { color: rgb(169, 68, 66); border-color: rgb(169, 68, 66); background-color: rgb(242, 222, 222); }
+.has-error .form-control-feedback { color: rgb(169, 68, 66); }
+.has-feedback label ~ .form-control-feedback { top: 25px; }
+.has-feedback label.sr-only ~ .form-control-feedback { top: 0px; }
+.help-block { display: block; margin-top: 5px; margin-bottom: 10px; color: rgb(115, 115, 115); }
+.form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline { padding-top: 7px; margin-top: 0px; margin-bottom: 0px; }
+.form-horizontal .radio, .form-horizontal .checkbox { min-height: 27px; }
+.form-horizontal .form-group { margin-right: -15px; margin-left: -15px; }
+.form-horizontal .has-feedback .form-control-feedback { right: 15px; }
+.btn { display: inline-block; padding: 6px 12px; margin-bottom: 0px; font-size: 14px; font-weight: normal; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; border: 1px solid transparent; border-radius: 4px; background-image: none; }
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus { outline: -webkit-focus-ring-color auto 5px; outline-offset: -2px; }
+.btn:hover, .btn:focus, .btn.focus { color: rgb(51, 51, 51); text-decoration: none; }
+.btn:active, .btn.active { outline: 0px; -webkit-box-shadow: rgba(0, 0, 0, 0.121569) 0px 3px 5px inset; box-shadow: rgba(0, 0, 0, 0.121569) 0px 3px 5px inset; background-image: none; }
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn { pointer-events: none; cursor: not-allowed; -webkit-box-shadow: none; box-shadow: none; opacity: 0.65; }
+.btn-default { color: rgb(51, 51, 51); border-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.btn-default.disabled, .btn-default[disabled], fieldset[disabled] .btn-default, .btn-default.disabled:hover, .btn-default[disabled]:hover, fieldset[disabled] .btn-default:hover, .btn-default.disabled:focus, .btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus, .btn-default.disabled.focus, .btn-default[disabled].focus, fieldset[disabled] .btn-default.focus, .btn-default.disabled:active, .btn-default[disabled]:active, fieldset[disabled] .btn-default:active, .btn-default.disabled.active, .btn-default[disabled].active, fieldset[disabled] .btn-default.active { border-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.btn-default .badge { color: rgb(255, 255, 255); background-color: rgb(51, 51, 51); }
+.btn-primary { color: rgb(255, 255, 255); border-color: rgb(53, 126, 189); background-color: rgb(66, 139, 202); }
+.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active { border-color: rgb(53, 126, 189); background-color: rgb(66, 139, 202); }
+.btn-primary .badge { color: rgb(66, 139, 202); background-color: rgb(255, 255, 255); }
+.btn-success { color: rgb(255, 255, 255); border-color: rgb(76, 174, 76); background-color: rgb(92, 184, 92); }
+.btn-success.disabled, .btn-success[disabled], fieldset[disabled] .btn-success, .btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover, .btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus, .btn-success.disabled.focus, .btn-success[disabled].focus, fieldset[disabled] .btn-success.focus, .btn-success.disabled:active, .btn-success[disabled]:active, fieldset[disabled] .btn-success:active, .btn-success.disabled.active, .btn-success[disabled].active, fieldset[disabled] .btn-success.active { border-color: rgb(76, 174, 76); background-color: rgb(92, 184, 92); }
+.btn-success .badge { color: rgb(92, 184, 92); background-color: rgb(255, 255, 255); }
+.btn-info { color: rgb(255, 255, 255); border-color: rgb(70, 184, 218); background-color: rgb(91, 192, 222); }
+.btn-info.disabled, .btn-info[disabled], fieldset[disabled] .btn-info, .btn-info.disabled:hover, .btn-info[disabled]:hover, fieldset[disabled] .btn-info:hover, .btn-info.disabled:focus, .btn-info[disabled]:focus, fieldset[disabled] .btn-info:focus, .btn-info.disabled.focus, .btn-info[disabled].focus, fieldset[disabled] .btn-info.focus, .btn-info.disabled:active, .btn-info[disabled]:active, fieldset[disabled] .btn-info:active, .btn-info.disabled.active, .btn-info[disabled].active, fieldset[disabled] .btn-info.active { border-color: rgb(70, 184, 218); background-color: rgb(91, 192, 222); }
+.btn-info .badge { color: rgb(91, 192, 222); background-color: rgb(255, 255, 255); }
+.btn-warning { color: rgb(255, 255, 255); border-color: rgb(238, 162, 54); background-color: rgb(240, 173, 78); }
+.btn-warning.disabled, .btn-warning[disabled], fieldset[disabled] .btn-warning, .btn-warning.disabled:hover, .btn-warning[disabled]:hover, fieldset[disabled] .btn-warning:hover, .btn-warning.disabled:focus, .btn-warning[disabled]:focus, fieldset[disabled] .btn-warning:focus, .btn-warning.disabled.focus, .btn-warning[disabled].focus, fieldset[disabled] .btn-warning.focus, .btn-warning.disabled:active, .btn-warning[disabled]:active, fieldset[disabled] .btn-warning:active, .btn-warning.disabled.active, .btn-warning[disabled].active, fieldset[disabled] .btn-warning.active { border-color: rgb(238, 162, 54); background-color: rgb(240, 173, 78); }
+.btn-warning .badge { color: rgb(240, 173, 78); background-color: rgb(255, 255, 255); }
+.btn-danger { color: rgb(255, 255, 255); border-color: rgb(212, 63, 58); background-color: rgb(217, 83, 79); }
+.btn-danger.disabled, .btn-danger[disabled], fieldset[disabled] .btn-danger, .btn-danger.disabled:hover, .btn-danger[disabled]:hover, fieldset[disabled] .btn-danger:hover, .btn-danger.disabled:focus, .btn-danger[disabled]:focus, fieldset[disabled] .btn-danger:focus, .btn-danger.disabled.focus, .btn-danger[disabled].focus, fieldset[disabled] .btn-danger.focus, .btn-danger.disabled:active, .btn-danger[disabled]:active, fieldset[disabled] .btn-danger:active, .btn-danger.disabled.active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger.active { border-color: rgb(212, 63, 58); background-color: rgb(217, 83, 79); }
+.btn-danger .badge { color: rgb(217, 83, 79); background-color: rgb(255, 255, 255); }
+.btn-link { font-weight: normal; color: rgb(66, 139, 202); border-radius: 0px; }
+.btn-link, .btn-link:active, .btn-link.active, .btn-link[disabled], fieldset[disabled] .btn-link { -webkit-box-shadow: none; box-shadow: none; background-color: transparent; }
+.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active { border-color: transparent; }
+.btn-link:hover, .btn-link:focus { color: rgb(42, 100, 150); text-decoration: underline; background-color: transparent; }
+.btn-link[disabled]:hover, fieldset[disabled] .btn-link:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:focus { color: rgb(119, 119, 119); text-decoration: none; }
+.btn-block { display: block; width: 100%; }
+.btn-block + .btn-block { margin-top: 5px; }
+input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block { width: 100%; }
+.fade { opacity: 0; transition: opacity 0.15s linear; -webkit-transition: opacity 0.15s linear; }
+.fade.in { opacity: 1; }
+.collapse { display: none; visibility: hidden; }
+.collapse.in { display: block; visibility: visible; }
+tr.collapse.in { display: table-row; }
+tbody.collapse.in { display: table-row-group; }
+.collapsing { position: relative; height: 0px; overflow: hidden; transition-timing-function: ease; -webkit-transition-timing-function: ease; transition-duration: 0.35s; -webkit-transition-duration: 0.35s; transition-property: height, visibility; -webkit-transition-property: height, visibility; }
+.caret { display: inline-block; width: 0px; height: 0px; margin-left: 2px; vertical-align: middle; border-top-width: 4px; border-top-style: solid; border-right-width: 4px; border-right-style: solid; border-right-color: transparent; border-left-width: 4px; border-left-style: solid; border-left-color: transparent; }
+.dropdown { position: relative; }
+.dropdown-toggle:focus { outline: 0px; }
+.dropdown-menu { position: absolute; top: 100%; left: 0px; z-index: 1000; display: none; float: left; min-width: 160px; padding: 5px 0px; margin: 2px 0px 0px; font-size: 14px; text-align: left; list-style: none; -webkit-background-clip: padding-box; border: 1px solid rgba(0, 0, 0, 0.14902); border-radius: 4px; -webkit-box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px; box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px; background-color: rgb(255, 255, 255); background-clip: padding-box; }
+.dropdown-menu.pull-right { right: 0px; left: auto; }
+.dropdown-menu .divider { height: 1px; margin: 9px 0px; overflow: hidden; background-color: rgb(229, 229, 229); }
+.dropdown-menu-right { right: 0px; left: auto; }
+.dropdown-menu-left { right: auto; left: 0px; }
+.dropdown-header { display: block; padding: 3px 20px; font-size: 12px; line-height: 1.42857143; color: rgb(119, 119, 119); white-space: nowrap; }
+.dropdown-backdrop { position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 990; }
+.dropup .caret, .navbar-fixed-bottom .dropdown .caret { content: ''; border-top-width: 0px; border-bottom-width: 4px; border-bottom-style: solid; }
+.dropup .dropdown-menu, .navbar-fixed-bottom .dropdown .dropdown-menu { top: auto; bottom: 100%; margin-bottom: 1px; }
+.btn-group, .btn-group-vertical { position: relative; display: inline-block; vertical-align: middle; }
+.btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group { margin-left: -1px; }
+.btn-toolbar { margin-left: -5px; }
+.btn-toolbar .btn-group, .btn-toolbar .input-group { float: left; }
+.btn-group .dropdown-toggle:active, .btn-group.open .dropdown-toggle { outline: 0px; }
+.btn-group.open .dropdown-toggle { -webkit-box-shadow: rgba(0, 0, 0, 0.121569) 0px 3px 5px inset; box-shadow: rgba(0, 0, 0, 0.121569) 0px 3px 5px inset; }
+.btn-group.open .dropdown-toggle.btn-link { -webkit-box-shadow: none; box-shadow: none; }
+.btn .caret { margin-left: 0px; }
+.btn-lg .caret { border-width: 5px 5px 0px; }
+.dropup .btn-lg .caret { border-width: 0px 5px 5px; }
+.btn-group-justified { display: table; width: 100%; table-layout: fixed; border-collapse: separate; }
+.input-group { position: relative; display: table; border-collapse: separate; }
+.input-group[class*="col-"] { float: none; padding-right: 0px; padding-left: 0px; }
+.input-group .form-control { position: relative; z-index: 2; float: left; width: 100%; margin-bottom: 0px; }
+.input-group-addon, .input-group-btn, .input-group .form-control { display: table-cell; }
+.input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child), .input-group .form-control:not(:first-child):not(:last-child) { border-radius: 0px; }
+.input-group-addon, .input-group-btn { width: 1%; white-space: nowrap; vertical-align: middle; }
+.input-group-addon { padding: 6px 12px; font-size: 14px; font-weight: normal; line-height: 1; color: rgb(85, 85, 85); text-align: center; border: 1px solid rgb(204, 204, 204); border-radius: 4px; background-color: rgb(238, 238, 238); }
+.input-group-addon.input-sm { padding: 5px 10px; font-size: 12px; border-radius: 3px; }
+.input-group-addon.input-lg { padding: 10px 16px; font-size: 18px; border-radius: 6px; }
+.input-group-addon input[type="radio"], .input-group-addon input[type="checkbox"] { margin-top: 0px; }
+.input-group-addon:first-child { border-right-width: 0px; }
+.input-group-addon:last-child { border-left-width: 0px; }
+.input-group-btn { position: relative; font-size: 0px; white-space: nowrap; }
+.nav { padding-left: 0px; margin-bottom: 0px; list-style: none; }
+.nav .nav-divider { height: 1px; margin: 9px 0px; overflow: hidden; background-color: rgb(229, 229, 229); }
+.nav-tabs { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(221, 221, 221); }
+.nav-tabs.nav-justified { width: 100%; border-bottom-width: 0px; }
+.nav-justified { width: 100%; }
+.nav-tabs-justified { border-bottom-width: 0px; }
+.nav-tabs .dropdown-menu { margin-top: -1px; border-top-left-radius: 0px; border-top-right-radius: 0px; }
+.navbar { position: relative; min-height: 50px; margin-bottom: 20px; border: 1px solid transparent; }
+.navbar-collapse { padding-right: 15px; padding-left: 15px; overflow-x: visible; border-top-width: 1px; border-top-style: solid; border-top-color: transparent; -webkit-box-shadow: rgba(255, 255, 255, 0.0980392) 0px 1px 0px inset; box-shadow: rgba(255, 255, 255, 0.0980392) 0px 1px 0px inset; }
+.navbar-collapse.in { overflow-y: auto; }
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse { max-height: 340px; }
+.navbar-static-top { z-index: 1000; border-width: 0px 0px 1px; }
+.navbar-fixed-top, .navbar-fixed-bottom { position: fixed; right: 0px; left: 0px; z-index: 1030; }
+.navbar-fixed-top { top: 0px; border-width: 0px 0px 1px; }
+.navbar-fixed-bottom { bottom: 0px; margin-bottom: 0px; border-width: 1px 0px 0px; }
+.navbar-brand { float: left; height: 50px; padding: 15px; font-size: 18px; line-height: 20px; }
+.navbar-brand:hover, .navbar-brand:focus { text-decoration: none; }
+.navbar-toggle { position: relative; float: right; padding: 9px 10px; margin-top: 8px; margin-right: 15px; margin-bottom: 8px; border: 1px solid transparent; border-radius: 4px; background-image: none; background-color: transparent; }
+.navbar-toggle:focus { outline: 0px; }
+.navbar-toggle .icon-bar { display: block; width: 22px; height: 2px; border-radius: 1px; }
+.navbar-toggle .icon-bar + .icon-bar { margin-top: 4px; }
+.navbar-nav { margin: 7.5px -15px; }
+.navbar-form { padding: 10px 15px; margin: 8px -15px; border-top-width: 1px; border-top-style: solid; border-top-color: transparent; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: transparent; -webkit-box-shadow: rgba(255, 255, 255, 0.0980392) 0px 1px 0px inset, rgba(255, 255, 255, 0.0980392) 0px 1px 0px; box-shadow: rgba(255, 255, 255, 0.0980392) 0px 1px 0px inset, rgba(255, 255, 255, 0.0980392) 0px 1px 0px; }
+.navbar-btn { margin-top: 8px; margin-bottom: 8px; }
+.navbar-btn.btn-sm { margin-top: 10px; margin-bottom: 10px; }
+.navbar-btn.btn-xs { margin-top: 14px; margin-bottom: 14px; }
+.navbar-text { margin-top: 15px; margin-bottom: 15px; }
+.navbar-default { border-color: rgb(231, 231, 231); background-color: rgb(248, 248, 248); }
+.navbar-default .navbar-brand { color: rgb(119, 119, 119); }
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus { color: rgb(94, 94, 94); background-color: transparent; }
+.navbar-default .navbar-text { color: rgb(119, 119, 119); }
+.navbar-default .navbar-toggle { border-color: rgb(221, 221, 221); }
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus { background-color: rgb(221, 221, 221); }
+.navbar-default .navbar-toggle .icon-bar { background-color: rgb(136, 136, 136); }
+.navbar-default .navbar-collapse, .navbar-default .navbar-form { border-color: rgb(231, 231, 231); }
+.navbar-default .navbar-link { color: rgb(119, 119, 119); }
+.navbar-default .navbar-link:hover { color: rgb(51, 51, 51); }
+.navbar-default .btn-link { color: rgb(119, 119, 119); }
+.navbar-default .btn-link:hover, .navbar-default .btn-link:focus { color: rgb(51, 51, 51); }
+.navbar-default .btn-link[disabled]:hover, fieldset[disabled] .navbar-default .btn-link:hover, .navbar-default .btn-link[disabled]:focus, fieldset[disabled] .navbar-default .btn-link:focus { color: rgb(204, 204, 204); }
+.navbar-inverse { border-color: rgb(8, 8, 8); background-color: rgb(34, 34, 34); }
+.navbar-inverse .navbar-brand { color: rgb(157, 157, 157); }
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus { color: rgb(255, 255, 255); background-color: transparent; }
+.navbar-inverse .navbar-text { color: rgb(157, 157, 157); }
+.navbar-inverse .navbar-toggle { border-color: rgb(51, 51, 51); }
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus { background-color: rgb(51, 51, 51); }
+.navbar-inverse .navbar-toggle .icon-bar { background-color: rgb(255, 255, 255); }
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form { border-color: rgb(16, 16, 16); }
+.navbar-inverse .navbar-link { color: rgb(157, 157, 157); }
+.navbar-inverse .navbar-link:hover { color: rgb(255, 255, 255); }
+.navbar-inverse .btn-link { color: rgb(157, 157, 157); }
+.navbar-inverse .btn-link:hover, .navbar-inverse .btn-link:focus { color: rgb(255, 255, 255); }
+.navbar-inverse .btn-link[disabled]:hover, fieldset[disabled] .navbar-inverse .btn-link:hover, .navbar-inverse .btn-link[disabled]:focus, fieldset[disabled] .navbar-inverse .btn-link:focus { color: rgb(68, 68, 68); }
+.breadcrumb { padding: 8px 15px; margin-bottom: 20px; list-style: none; border-radius: 4px; background-color: rgb(245, 245, 245); }
+.pagination { display: inline-block; padding-left: 0px; margin: 20px 0px; border-radius: 4px; }
+.pager { padding-left: 0px; margin: 20px 0px; text-align: center; list-style: none; }
+.pager li { display: inline; }
+.label { display: inline; padding: 0.2em 0.6em 0.3em; font-size: 75%; font-weight: bold; line-height: 1; color: rgb(255, 255, 255); text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0.25em; }
+a.label:hover, a.label:focus { color: rgb(255, 255, 255); text-decoration: none; cursor: pointer; }
+.label:empty { display: none; }
+.btn .label { position: relative; top: -1px; }
+.label-default { background-color: rgb(119, 119, 119); }
+.label-default[href]:hover, .label-default[href]:focus { background-color: rgb(94, 94, 94); }
+.label-primary { background-color: rgb(66, 139, 202); }
+.label-primary[href]:hover, .label-primary[href]:focus { background-color: rgb(48, 113, 169); }
+.label-success { background-color: rgb(92, 184, 92); }
+.label-success[href]:hover, .label-success[href]:focus { background-color: rgb(68, 157, 68); }
+.label-info { background-color: rgb(91, 192, 222); }
+.label-info[href]:hover, .label-info[href]:focus { background-color: rgb(49, 176, 213); }
+.label-warning { background-color: rgb(240, 173, 78); }
+.label-warning[href]:hover, .label-warning[href]:focus { background-color: rgb(236, 151, 31); }
+.label-danger { background-color: rgb(217, 83, 79); }
+.label-danger[href]:hover, .label-danger[href]:focus { background-color: rgb(201, 48, 44); }
+.badge { display: inline-block; min-width: 10px; padding: 3px 7px; font-size: 12px; font-weight: bold; line-height: 1; color: rgb(255, 255, 255); text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 10px; background-color: rgb(119, 119, 119); }
+.badge:empty { display: none; }
+.btn .badge { position: relative; top: -1px; }
+.btn-xs .badge { top: 0px; padding: 1px 5px; }
+a.badge:hover, a.badge:focus { color: rgb(255, 255, 255); text-decoration: none; cursor: pointer; }
+.jumbotron { padding: 30px 15px; margin-bottom: 30px; color: inherit; background-color: rgb(238, 238, 238); }
+.jumbotron h1, .jumbotron .h1 { color: inherit; }
+.jumbotron p { margin-bottom: 15px; font-size: 21px; font-weight: 200; }
+.container .jumbotron, .container-fluid .jumbotron { border-radius: 6px; }
+.jumbotron .container { max-width: 100%; }
+.thumbnail { display: block; padding: 4px; margin-bottom: 20px; line-height: 1.42857143; border: 1px solid rgb(221, 221, 221); border-radius: 4px; transition: border 0.2s ease-in-out; -webkit-transition: border 0.2s ease-in-out; background-color: rgb(255, 255, 255); }
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active { border-color: rgb(66, 139, 202); }
+.thumbnail .caption { padding: 9px; color: rgb(51, 51, 51); }
+.alert { padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px; }
+.alert h4 { margin-top: 0px; color: inherit; }
+.alert .alert-link { font-weight: bold; }
+.alert-dismissable, .alert-dismissible { padding-right: 35px; }
+.alert-dismissable .close, .alert-dismissible .close { position: relative; top: -2px; right: -21px; color: inherit; }
+.alert-success { color: rgb(60, 118, 61); border-color: rgb(214, 233, 198); background-color: rgb(223, 240, 216); }
+.alert-success hr { border-top-color: rgb(201, 226, 179); }
+.alert-success .alert-link { color: rgb(43, 84, 44); }
+.alert-info { color: rgb(49, 112, 143); border-color: rgb(188, 232, 241); background-color: rgb(217, 237, 247); }
+.alert-info hr { border-top-color: rgb(166, 225, 236); }
+.alert-info .alert-link { color: rgb(36, 82, 105); }
+.alert-warning { color: rgb(138, 109, 59); border-color: rgb(250, 235, 204); background-color: rgb(252, 248, 227); }
+.alert-warning hr { border-top-color: rgb(247, 225, 181); }
+.alert-warning .alert-link { color: rgb(102, 81, 44); }
+.alert-danger { color: rgb(169, 68, 66); border-color: rgb(235, 204, 209); background-color: rgb(242, 222, 222); }
+.alert-danger hr { border-top-color: rgb(228, 185, 192); }
+.alert-danger .alert-link { color: rgb(132, 53, 52); }
+.progress { height: 20px; margin-bottom: 20px; overflow: hidden; border-radius: 4px; -webkit-box-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 2px inset; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 2px inset; background-color: rgb(245, 245, 245); }
+.progress-bar { float: left; width: 0px; height: 100%; font-size: 12px; line-height: 20px; color: rgb(255, 255, 255); text-align: center; -webkit-box-shadow: rgba(0, 0, 0, 0.14902) 0px -1px 0px inset; box-shadow: rgba(0, 0, 0, 0.14902) 0px -1px 0px inset; transition: width 0.6s ease; -webkit-transition: width 0.6s ease; background-color: rgb(66, 139, 202); }
+.progress-striped .progress-bar, .progress-bar-striped { -webkit-background-size: 40px; background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.14902) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.14902) 50%, rgba(255, 255, 255, 0.14902) 75%, transparent 75%, transparent); background-size: 40px 40px; }
+.progress.active .progress-bar, .progress-bar.active { -webkit-animation: progress-bar-stripes 2s linear infinite; -webkit-animation-play-state: initial; }
+.progress-bar-success { background-color: rgb(92, 184, 92); }
+.progress-striped .progress-bar-success { background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.14902) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.14902) 50%, rgba(255, 255, 255, 0.14902) 75%, transparent 75%, transparent); }
+.progress-bar-info { background-color: rgb(91, 192, 222); }
+.progress-striped .progress-bar-info { background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.14902) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.14902) 50%, rgba(255, 255, 255, 0.14902) 75%, transparent 75%, transparent); }
+.progress-bar-warning { background-color: rgb(240, 173, 78); }
+.progress-striped .progress-bar-warning { background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.14902) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.14902) 50%, rgba(255, 255, 255, 0.14902) 75%, transparent 75%, transparent); }
+.progress-bar-danger { background-color: rgb(217, 83, 79); }
+.progress-striped .progress-bar-danger { background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.14902) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.14902) 50%, rgba(255, 255, 255, 0.14902) 75%, transparent 75%, transparent); }
+.media { margin-top: 15px; }
+.media:first-child { margin-top: 0px; }
+.media-left, .media-right, .media-body { display: table-cell; vertical-align: top; }
+.media-middle { vertical-align: middle; }
+.media-bottom { vertical-align: bottom; }
+.media-heading { margin-top: 0px; margin-bottom: 5px; }
+.media-list { padding-left: 0px; list-style: none; }
+.list-group { padding-left: 0px; margin-bottom: 20px; }
+.list-group-item { position: relative; display: block; padding: 10px 15px; margin-bottom: -1px; border: 1px solid rgb(221, 221, 221); background-color: rgb(255, 255, 255); }
+.list-group-item:first-child { border-top-left-radius: 4px; border-top-right-radius: 4px; }
+.list-group-item:last-child { margin-bottom: 0px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; }
+a.list-group-item { color: rgb(85, 85, 85); }
+a.list-group-item .list-group-item-heading { color: rgb(51, 51, 51); }
+a.list-group-item:hover, a.list-group-item:focus { color: rgb(85, 85, 85); text-decoration: none; background-color: rgb(245, 245, 245); }
+.list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus { color: rgb(119, 119, 119); cursor: not-allowed; background-color: rgb(238, 238, 238); }
+.list-group-item.disabled .list-group-item-heading, .list-group-item.disabled:hover .list-group-item-heading, .list-group-item.disabled:focus .list-group-item-heading { color: inherit; }
+.list-group-item.disabled .list-group-item-text, .list-group-item.disabled:hover .list-group-item-text, .list-group-item.disabled:focus .list-group-item-text { color: rgb(119, 119, 119); }
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus { z-index: 2; color: rgb(255, 255, 255); border-color: rgb(66, 139, 202); background-color: rgb(66, 139, 202); }
+.list-group-item.active .list-group-item-text, .list-group-item.active:hover .list-group-item-text, .list-group-item.active:focus .list-group-item-text { color: rgb(225, 237, 247); }
+.list-group-item-success { color: rgb(60, 118, 61); background-color: rgb(223, 240, 216); }
+a.list-group-item-success { color: rgb(60, 118, 61); }
+a.list-group-item-success .list-group-item-heading { color: inherit; }
+a.list-group-item-success:hover, a.list-group-item-success:focus { color: rgb(60, 118, 61); background-color: rgb(208, 233, 198); }
+a.list-group-item-success.active, a.list-group-item-success.active:hover, a.list-group-item-success.active:focus { color: rgb(255, 255, 255); border-color: rgb(60, 118, 61); background-color: rgb(60, 118, 61); }
+.list-group-item-info { color: rgb(49, 112, 143); background-color: rgb(217, 237, 247); }
+a.list-group-item-info { color: rgb(49, 112, 143); }
+a.list-group-item-info .list-group-item-heading { color: inherit; }
+a.list-group-item-info:hover, a.list-group-item-info:focus { color: rgb(49, 112, 143); background-color: rgb(196, 227, 243); }
+a.list-group-item-info.active, a.list-group-item-info.active:hover, a.list-group-item-info.active:focus { color: rgb(255, 255, 255); border-color: rgb(49, 112, 143); background-color: rgb(49, 112, 143); }
+.list-group-item-warning { color: rgb(138, 109, 59); background-color: rgb(252, 248, 227); }
+a.list-group-item-warning { color: rgb(138, 109, 59); }
+a.list-group-item-warning .list-group-item-heading { color: inherit; }
+a.list-group-item-warning:hover, a.list-group-item-warning:focus { color: rgb(138, 109, 59); background-color: rgb(250, 242, 204); }
+a.list-group-item-warning.active, a.list-group-item-warning.active:hover, a.list-group-item-warning.active:focus { color: rgb(255, 255, 255); border-color: rgb(138, 109, 59); background-color: rgb(138, 109, 59); }
+.list-group-item-danger { color: rgb(169, 68, 66); background-color: rgb(242, 222, 222); }
+a.list-group-item-danger { color: rgb(169, 68, 66); }
+a.list-group-item-danger .list-group-item-heading { color: inherit; }
+a.list-group-item-danger:hover, a.list-group-item-danger:focus { color: rgb(169, 68, 66); background-color: rgb(235, 204, 204); }
+a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-group-item-danger.active:focus { color: rgb(255, 255, 255); border-color: rgb(169, 68, 66); background-color: rgb(169, 68, 66); }
+.list-group-item-heading { margin-top: 0px; margin-bottom: 5px; }
+.list-group-item-text { margin-bottom: 0px; line-height: 1.3; }
+.panel { margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px; -webkit-box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 1px; box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 1px; background-color: rgb(255, 255, 255); }
+.panel-body { padding: 15px; }
+.panel-heading { padding: 10px 15px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: transparent; border-top-left-radius: 3px; border-top-right-radius: 3px; }
+.panel-title { margin-top: 0px; margin-bottom: 0px; font-size: 16px; color: inherit; }
+.panel-footer { padding: 10px 15px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(221, 221, 221); border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; background-color: rgb(245, 245, 245); }
+.panel-heading + .list-group .list-group-item:first-child { border-top-width: 0px; }
+.list-group + .panel-footer { border-top-width: 0px; }
+.panel-group { margin-bottom: 20px; }
+.panel-group .panel { margin-bottom: 0px; border-radius: 4px; }
+.panel-group .panel + .panel { margin-top: 5px; }
+.panel-group .panel-heading { border-bottom-width: 0px; }
+.panel-group .panel-footer { border-top-width: 0px; }
+.panel-group .panel-footer + .panel-collapse .panel-body { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(221, 221, 221); }
+.panel-default { border-color: rgb(221, 221, 221); }
+.panel-primary { border-color: rgb(66, 139, 202); }
+.panel-success { border-color: rgb(214, 233, 198); }
+.panel-info { border-color: rgb(188, 232, 241); }
+.panel-warning { border-color: rgb(250, 235, 204); }
+.panel-danger { border-color: rgb(235, 204, 209); }
+.embed-responsive { position: relative; display: block; height: 0px; padding: 0px; overflow: hidden; }
+.embed-responsive .embed-responsive-item, .embed-responsive iframe, .embed-responsive embed, .embed-responsive object, .embed-responsive video { position: absolute; top: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%; border: 0px; }
+.embed-responsive.embed-responsive-16by9 { padding-bottom: 56.25%; }
+.embed-responsive.embed-responsive-4by3 { padding-bottom: 75%; }
+.well { min-height: 20px; padding: 19px; margin-bottom: 20px; border: 1px solid rgb(227, 227, 227); border-radius: 4px; -webkit-box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 1px inset; box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 1px inset; background-color: rgb(245, 245, 245); }
+.well blockquote { border-color: rgba(0, 0, 0, 0.14902); }
+.well-lg { padding: 24px; border-radius: 6px; }
+.well-sm { padding: 9px; border-radius: 3px; }
+.close { float: right; font-size: 21px; font-weight: bold; line-height: 1; color: rgb(0, 0, 0); text-shadow: rgb(255, 255, 255) 0px 1px 0px; opacity: 0.2; }
+.close:hover, .close:focus { color: rgb(0, 0, 0); text-decoration: none; cursor: pointer; opacity: 0.5; }
+button.close { -webkit-appearance: none; padding: 0px; cursor: pointer; border: 0px; background: transparent; }
+.modal-open { overflow: hidden; }
+.modal { position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 1040; display: none; overflow: hidden; outline: 0px; }
+.modal.fade .modal-dialog { transition: transform 0.3s ease-out; -webkit-transition: transform 0.3s ease-out; -webkit-transform: translate(0px, -25%); transform: translate(0px, -25%); }
+.modal.in .modal-dialog { -webkit-transform: translate(0px, 0px); transform: translate(0px, 0px); }
+.modal-open .modal { overflow-x: hidden; overflow-y: auto; }
+.modal-dialog { position: relative; width: auto; margin: 10px; }
+.modal-content { position: relative; -webkit-background-clip: padding-box; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 6px; outline: 0px; -webkit-box-shadow: rgba(0, 0, 0, 0.498039) 0px 3px 9px; box-shadow: rgba(0, 0, 0, 0.498039) 0px 3px 9px; background-color: rgb(255, 255, 255); background-clip: padding-box; }
+.modal-backdrop { position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; background-color: rgb(0, 0, 0); }
+.modal-backdrop.fade { opacity: 0; }
+.modal-backdrop.in { opacity: 0.5; }
+.modal-header { min-height: 16.42857143px; padding: 15px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(229, 229, 229); }
+.modal-header .close { margin-top: -2px; }
+.modal-title { margin: 0px; line-height: 1.42857143; }
+.modal-body { position: relative; padding: 15px; }
+.modal-footer { padding: 15px; text-align: right; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(229, 229, 229); }
+.modal-footer .btn + .btn { margin-bottom: 0px; margin-left: 5px; }
+.modal-footer .btn-group .btn + .btn { margin-left: -1px; }
+.modal-footer .btn-block + .btn-block { margin-left: 0px; }
+.modal-scrollbar-measure { position: absolute; top: -9999px; width: 50px; height: 50px; overflow: scroll; }
+.tooltip { position: absolute; z-index: 1070; display: block; font-size: 12px; line-height: 1.4; visibility: visible; opacity: 0; }
+.tooltip.in { opacity: 0.9; }
+.tooltip.top { padding: 5px 0px; margin-top: -3px; }
+.tooltip.right { padding: 0px 5px; margin-left: 3px; }
+.tooltip.bottom { padding: 5px 0px; margin-top: 3px; }
+.tooltip.left { padding: 0px 5px; margin-left: -3px; }
+.tooltip-inner { max-width: 200px; padding: 3px 8px; color: rgb(255, 255, 255); text-align: center; text-decoration: none; border-radius: 4px; background-color: rgb(0, 0, 0); }
+.tooltip-arrow { position: absolute; width: 0px; height: 0px; border-color: transparent; border-style: solid; }
+.tooltip.top .tooltip-arrow { bottom: 0px; left: 50%; margin-left: -5px; border-width: 5px 5px 0px; border-top-color: rgb(0, 0, 0); }
+.tooltip.top-left .tooltip-arrow { bottom: 0px; left: 5px; border-width: 5px 5px 0px; border-top-color: rgb(0, 0, 0); }
+.tooltip.top-right .tooltip-arrow { right: 5px; bottom: 0px; border-width: 5px 5px 0px; border-top-color: rgb(0, 0, 0); }
+.tooltip.right .tooltip-arrow { top: 50%; left: 0px; margin-top: -5px; border-width: 5px 5px 5px 0px; border-right-color: rgb(0, 0, 0); }
+.tooltip.left .tooltip-arrow { top: 50%; right: 0px; margin-top: -5px; border-width: 5px 0px 5px 5px; border-left-color: rgb(0, 0, 0); }
+.tooltip.bottom .tooltip-arrow { top: 0px; left: 50%; margin-left: -5px; border-width: 0px 5px 5px; border-bottom-color: rgb(0, 0, 0); }
+.tooltip.bottom-left .tooltip-arrow { top: 0px; left: 5px; border-width: 0px 5px 5px; border-bottom-color: rgb(0, 0, 0); }
+.tooltip.bottom-right .tooltip-arrow { top: 0px; right: 5px; border-width: 0px 5px 5px; border-bottom-color: rgb(0, 0, 0); }
+.popover { position: absolute; top: 0px; left: 0px; z-index: 1060; display: none; max-width: 276px; padding: 1px; font-size: 14px; font-weight: normal; line-height: 1.42857143; text-align: left; white-space: normal; -webkit-background-clip: padding-box; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 6px; -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px; background-color: rgb(255, 255, 255); background-clip: padding-box; }
+.popover.top { margin-top: -10px; }
+.popover.right { margin-left: 10px; }
+.popover.bottom { margin-top: 10px; }
+.popover.left { margin-left: -10px; }
+.popover-title { padding: 8px 14px; margin: 0px; font-size: 14px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(235, 235, 235); border-radius: 5px 5px 0px 0px; background-color: rgb(247, 247, 247); }
+.popover-content { padding: 9px 14px; }
+.carousel { position: relative; }
+.carousel-inner { position: relative; width: 100%; overflow: hidden; }
+.carousel-control { position: absolute; top: 0px; bottom: 0px; left: 0px; width: 15%; font-size: 20px; color: rgb(255, 255, 255); text-align: center; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 2px; opacity: 0.5; }
+.carousel-control.left { background-image: linear-gradient(to right, rgba(0, 0, 0, 0.498039) 0%, rgba(0, 0, 0, 0) 100%); background-repeat: repeat-x; }
+.carousel-control.right { right: 0px; left: auto; background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.498039) 100%); background-repeat: repeat-x; }
+.carousel-control:hover, .carousel-control:focus { color: rgb(255, 255, 255); text-decoration: none; outline: 0px; opacity: 0.9; }
+.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right { position: absolute; top: 50%; z-index: 5; display: inline-block; }
+.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left { left: 50%; margin-left: -10px; }
+.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right { right: 50%; margin-right: -10px; }
+.carousel-control .icon-prev, .carousel-control .icon-next { width: 20px; height: 20px; margin-top: -10px; font-family: serif; }
+.carousel-control .icon-prev::before { content: '‹'; }
+.carousel-control .icon-next::before { content: '›'; }
+.carousel-indicators { position: absolute; bottom: 10px; left: 50%; z-index: 15; width: 60%; padding-left: 0px; margin-left: -30%; text-align: center; list-style: none; }
+.carousel-indicators li { display: inline-block; width: 10px; height: 10px; margin: 1px; text-indent: -999px; cursor: pointer; border: 1px solid rgb(255, 255, 255); border-radius: 10px; background-color: rgba(0, 0, 0, 0); }
+.carousel-indicators .active { width: 12px; height: 12px; margin: 0px; background-color: rgb(255, 255, 255); }
+.carousel-caption { position: absolute; right: 15%; bottom: 20px; left: 15%; z-index: 10; padding-top: 20px; padding-bottom: 20px; color: rgb(255, 255, 255); text-align: center; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 2px; }
+.carousel-caption .btn { text-shadow: none; }
+.center-block { display: block; margin-right: auto; margin-left: auto; }
+.pull-right { float: right !important; }
+.pull-left { float: left !important; }
+.hide { display: none !important; }
+.show { display: block !important; }
+.invisible { visibility: hidden; }
+.text-hide { font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 0px; line-height: 0; font-family: a; color: transparent; text-shadow: none; border: 0px; background-color: transparent; }
+.hidden { display: none !important; visibility: hidden !important; }
+.affix { position: fixed; }
+.visible-xs, .visible-sm, .visible-md, .visible-lg { display: none !important; }
+.visible-xs-block, .visible-xs-inline, .visible-xs-inline-block, .visible-sm-block, .visible-sm-inline, .visible-sm-inline-block, .visible-md-block, .visible-md-inline, .visible-md-inline-block, .visible-lg-block, .visible-lg-inline, .visible-lg-inline-block { display: none !important; }
+.visible-print { display: none !important; }
+.visible-print-block { display: none !important; }
+.visible-print-inline { display: none !important; }
+.visible-print-inline-block { display: none !important; }
+body { color: rgb(65, 64, 66); }
+h1 { font-size: 30px; letter-spacing: -0.5px; line-height: 40px; margin: 28px auto 9px; text-align: center; text-transform: uppercase; width: 940px; }
+h3 { font-size: 16px; letter-spacing: 0.6px; text-align: center; text-transform: uppercase; }
+ol { padding-left: 23px; }
+p { margin: 0px; }
+ul { padding-left: 0px; }
+body, svg { font-family: Lato, sans-serif; }
+.caret { float: right; margin-top: 4px; }
+.clearfix { clear: both; }
+.content { margin: 0px auto; padding: 0px 15px; width: 970px; }
+.defs { display: none; }
+#down-arrow { margin: 0px 0px 30px 425px; }
+a.report { color: inherit; font-size: 12px; padding-right: 6px; position: relative; top: -10px; }
+a.report:hover { text-decoration: underline; }
+.shares { top: -100px; font-weight: bold; left: 855px; margin-bottom: -71px; position: relative; width: 75px; text-align: right; }
+.shares a { text-decoration: none; margin-left: -10px; }
+.shares .divider { color: rgb(170, 170, 170); position: relative; top: 4px; }
+.subhead { font-size: 20px; font-weight: 400; line-height: 28px; margin: 10px auto 43px; text-align: center; }
+.heat-map, #heat-map-2012 { float: right; margin-right: 5px; }
+#heat-map-2012 { display: none; padding-top: 4px; width: 680px; position: absolute; right: 4px; top: 0px; }
+.legend { bottom: 419px; font-size: 12px; height: 20px; padding: 2px 0px 0px; position: relative; float: right; }
+.legend p { font-weight: bold; line-height: 14px; padding-bottom: 6px; visibility: hidden; }
+li.key { border-left-width: 15px; border-left-style: solid; font-size: 0.75em; padding-left: 5px; margin-bottom: 3px; list-style-type: none; }
+.map-box { position: relative; float: right; }
+#old-election { margin-left: 7px; }
+#old-election { -webkit-user-select: none; }
+button#old-election { height: 56px; margin-left: 51px; margin-top: -4px; width: 122px; }
+.dropdown-menu { border-radius: 0px; cursor: default; max-height: 145px; min-width: 268px; overflow-x: hidden; overflow-y: auto; top: 10px; left: 161px; }
+.dropdown-menu li { padding-left: 8px; }
+.dropdown-menu li:hover { background-color: rgb(244, 245, 246); }
+.dropdown-toggle { border-radius: 0px; bottom: 22px; height: 35px; margin-left: 161px; position: relative; width: 268px; }
+.dropdown-toggle #state-name { float: left; font-size: 15px; letter-spacing: 0.5px; margin: -2px 0px 0px -4px; }
+.key-state { text-transform: lowercase; }
+#key-state-hed { margin: 0px auto; width: 700px; text-align: center; }
+#menu { margin: 0px 0px -10px 50px; }
+.state-options { font-size: 12px; text-transform: uppercase; }
+#new-voter-bar { height: 25px; }
+#heat-read-out { bottom: 94px; border: 1px solid rgb(221, 221, 221); border-radius: 8px; font-size: 16px; position: relative; left: 265px; width: 705px; }
+.read-out { height: 115px; }
+.read-out h3 { font-size: 12px; margin-top: 0px; text-align: left; }
+.read-out p { font-size: 14px; }
+#heat-read-out span { font-weight: bold; }
+#state-name { font-weight: bold; text-transform: uppercase; }
+#past-margin-bar { height: 5px; }
+.pop-estimates { float: left; margin: 0px 18px 0px 21px; width: 218px; }
+.pop-estimates .read-out-number { float: right; }
+.pop-estimates p { line-height: 24px; }
+.pop-estimates span, .simulated-elex h3 span { visibility: hidden; }
+.simulated-elex { float: left; margin-right: 25px; width: 245px; }
+.simulated-margin { float: left; }
+#big-number { color: rgb(221, 221, 221); float: right; font-size: 70px; margin-top: -7px; }
+p.big-number-hed { font-size: 12px; line-height: 14px; text-transform: uppercase; }
+.check-box { height: 25px; width: 8px; position: relative; right: 31px; margin-bottom: -25px; background-color: rgb(48, 182, 117); }
+.mypanel { float: left; height: 550px; margin-right: 11px; padding: 14px 5px 7px 9px; position: relative; width: 245px; background-color: rgb(244, 245, 246); }
+.mypanel h2 { font-size: 15px; font-weight: bold; line-height: 20px; margin: -3px 0px 19px -3px; text-align: center; text-transform: uppercase; }
+.mypanel p { font-size: 14px; line-height: 18px; margin-bottom: 12px; padding: 7px 0px 0px; }
+.mypanel button { height: 28px; text-transform: uppercase; width: 61px; }
+.mypanel hr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(205, 205, 205); margin-top: 14px; width: 221px; }
+li.choices { font-size: 14px; font-weight: bold; letter-spacing: 0.5px; margin-bottom: 6px; text-transform: uppercase; }
+li.choices:last-of-type { width: 190px; }
+#slider { height: 86px; margin-left: -26px; -webkit-user-select: none; }
+.slider-handle { cursor: -webkit-grab; }
+.slider-handle:active { cursor: -webkit-grabbing; }
+p.slide-splainer { font-size: 12px; line-height: 14px; position: relative; width: 73px; }
+p.slide-splainer.bush { bottom: 115px; left: 70px; margin-bottom: -105px; width: 110px; }
+p.slide-splainer.rom { bottom: 40px; right: 14px; text-align: right; }
+.axis text { font-family: sans-serif; font-size: 10px; }
+button { border: 1px solid rgb(190, 190, 190); border-radius: 5px; background-color: rgb(255, 255, 255); }
+button.active { color: rgb(255, 255, 255); background-color: rgb(99, 101, 103); }
+button:focus, .btn:focus { outline: none !important; }
+button.map-type { font-size: 18px; height: 54px; width: 218px; letter-spacing: 1.2px; line-height: 22px; }
+.disable-box { display: none; height: 460px; position: absolute; right: -1px; top: -2px; width: 246px; z-index: 2; background-color: rgba(255, 255, 255, 0.701961); }
+.text-disable-box { display: none; height: 180px; position: absolute; top: -25px; width: 710px; z-index: 2; right: -3px; background-color: rgba(255, 255, 255, 0.8); }
+div.explainer:last-of-type { padding: 13px 0px 0px 14px; width: 90px; }
+.explainer { font-size: 11px; line-height: 14px; margin: -11px 0px -4px -13px; width: 78px; }
+.high-turnout { bottom: 16px; position: relative; left: 138px; text-align: right; }
+.key-states-zone { margin-top: -68px; }
+.key-states-zone h2 { font-size: 21px; line-height: 30px; padding: 0px 0px 0px 28px; margin-bottom: -20px; text-align: center; }
+.key-states-zone h3 { margin-left: 300px; width: 355px; }
+#margin-chart { padding: 0px 0px 11px; margin-left: -17px; }
+.footnotes { width: 100%; background-color: rgb(241, 242, 242); }
+.footnotes p { float: left; line-height: 18px; padding: 8px 0px 35px 18px; width: 322px; }
+.footnotes h3 { padding-top: 23px; }
+.foot-container { margin: 0px auto; width: 970px; }
+.en-markup-crop-options { top: 18px !important; left: 50% !important; margin-left: -100px !important; width: 200px !important; border: 2px solid rgba(255, 255, 255, 0.380392) !important; border-radius: 4px !important; }
+.en-markup-crop-options div div:first-of-type { margin-left: 0px !important; }]]></style></defs><path d="M432.278 260.686l21.038-1.867 3.526 12.548 5.13 18.44 1.895 3.978 1.627 2.197-.373 1.523 1.53.726-1.888 2.112.284 1.857-.802 2.64 1.745 4.318-.444 3.992 1.845 3.89-6.2.786-26.53 2.647-.243 1.985 3.098 2.585-.267 2.478 1.085 1.13-1.684 2.357-1.703.642-3.42-2.156-.658-3.62-1.008-.325-.95 2.857-.197 2.712-3.338-.463-2.777-22.595.562-28.503.377-16.467-1.38-1.448z" fill="#6f0307" stroke="#bebebe"/><path d="M131.132 387.418l-.19-.837.766.273.202.864-.76.147zm-1.167-1.28l.724.41.01.962-.334-.216zm-4.834-3.928l.62-.325.347.096.153.76-.53.356-.675-.29zm-1.55.978l1.237-.217.61.85 1.537.663.626.51.21.53.326.01.283.687.726.534.272.6.257-.3.305.437.72 1.89-.055.498-.82.19-.546-.896-.252.175-.817-.537-.088.3-.56-.085.317.703.387-.337.384.173.194 1.044-.582.073-1.24-1-.444-.574-.172-.692-.63.263-.166-.515.475-.212.343-.62-.478-.742-.633.025-.508-1.272-.422-.582-.247.586-.382-.685.296-.483-.598-.737zm.85 4.06l.64.157.24-.524.427.073-.15.854-.667-.026zm-2.605-6.673l-.536-.37.34-.465h1.602l.64-.236.756.772 1.093.48.1.596-.346.445-.655.065-.32.493-.665-.025-.59.427-.502-1.126-.18-.78-.498.128zm.128 2.407l-.492-.266-.65-.695-.237-.613.235-.4.433.196-.084-.54 1.346.566.378.836-.34.225.068 1.055.355.188.025 1.245-.5-.114.158.726-.38-.27-.593-1.337zm-1.13 1.416l.08.6-.475-.215-1.675-1.912-.833-.47.074-.585-.615-1.187-1-.813.44-1.192.44.318.725.146.587-.114.25.79 1.337 2.425zm-3.1-9.606l1 .115.5-.212.088.39 1.17 1.13-.586-.056.013.502.784.534.567 1.197-.47.504-.055.495-.654 1.183-.29.057-.404-.92.02-.63-.343-.82-.63-.943-.106-.565-.6-1.28-.516-.47-.39-.956zm-1.744 5.344l.382-.108.656.792v.68l-.57.31-.188-1.013zm-2.34-4.087l.8-.192.393-.584.918.39-.215.775.215.205.163-.848.978-.016.666.4v1.07l.257.014.695 1.222-.646.4-1.61-.694.357 1.084-.287.556-.54-.056-.485-.605-.686-.312-.687-.847-.657-.294-.186-.807.287-.374-.072-.72zm-29.997-4.907l-.95 1.417-.035.52-.847.424.11-.813.866-.914.497-.968zm-1.424-1.836l-.035 1.093-.258 1.143-.54-.322.3-1.317zm-5.245-49.776l.207.206.95.13.474-.19.673-.075.753.11.416-.163.47.364.826.373 1.045-.03.245-.32.66-.266.237-.403.73-.17.03.25.415-.21.97.235.724.526.632.2.178.252.54-.043.59.373.156.284.257-.307.412.12 9.42 47.502 1.255.184.06-.478 1.36.385.55-.967 1.5-.423.037 1.427.494.385.974.242.364.677 3.248 2.027.836 1.584.347-.588.917-1.095.625-.196.13-.685-.273-.9.443-.122-.107-.83.733-.41.973-1.016 1.482.85.1.743.485.63.7-.03 1.144.82.035.316.552.458 1.255.328 2.634 2.305.505.676.792.58 1.363 1.41 1.295 1.16-.105.697.92-.072.09.933.81.114.434.965.675-.296 1.69.548.895-.112.605.324.464-.02.297.438.925-.193.488.484.01 1.244.4.884.954 1.343-.163.487-.163 1.61-.618 1.35-.463-.407-.313.295-.628-.92-.08-.457-.488-.398.447-.767-.252-.12-.4.9-.503-.304-.31.382-1.537-.67-.016-1.318-.587.655.173.602-.735-.26-.314-.524.18-.752-.332-.58-.368.698-.915-.924-.26.327-.515-.85.325-.77.508-.17-.395-.678-.053-1.035-.405.167-1.126-.525-.924-.777-1.635-.25-.603-1.993-.527-.103-.157-.847-.53-.073-1.014-.878-.363-.516-1.215.16-1.707-1.1-1.54-3.295-.022.867.317.68.906 1.223-.064.256.67 1.023.144.76-.55-.02-.637-.706-.567.014-.682.43-.316-1.187-.728-.862-.328.415-1.91-.61-.06.34.98.095.918.64.278-.048.267.637.57.672-.783.687-.607-.132.17.693-.83-.34-.332-.326-.43.113-1.447-.69-1.094-.668-.215-.505-.673-.658-1.464-.236-.87-.412-1.436-.377-.986-.456-.082-.712.287.17.18-.507-.5-.942.225-.634-.222-.215-.392 1.196-1.163.98-1.617.067-1.44-.387-.153-.494-.592.228-.723-.244-1.522-.076-.854.118-1.866.594-.655.304-.978-.603-1.123-.184-.4-.405-.23-.746-.726.157-.16.71-1.422-.736-.257-.37-1.256.897-.556.955-.37-.792.228-.485.4.07 1.204-.746-.22-.433-.566.296-.304-.568-.56-.023-.714-1.443-.165.392-.745.28-.267-.174-.21.51-.978-.08.01.545-.634.202-.32-.172.133-.986-.27.05-.352 1.063.636.29.122.733.446.762-.145.873-.515-.24-.103.44.492.128.37 1.113-.672.29-.4-.195-.583.363-.332-.23-.803.09-.003-.43-.36.313-.174.557-.373-.46-.38.712.207.3-.572.438-.538.09-.18.556-.56.518-.412-.15-.415.595-.36-.01-.696 1.204-.807.12-.275-.36-.47.647-1.03-.45.203-.893.653-.336.433.042.116-.348.746-.716.004-.572-.983.812-.86-.427-.11-.312.382-1.326.684-.968.082-.775.205-.152.05-.83-.398-.9.857-.377 1.586-1.392.426.49.517.114.722-.588-.878-.66-.358-.523-.65.094-.476-.233-.124.236-.76.407-.324.73-.775.2-.782.858-.065.545-.614.305-.122.603-.436.383-.183 1.06-.857.705.434.535-.338.806-.82.158-.057 1.028-.77.38-.246-.425-.38.803-.46.03.09.57-1.024.345-.207 1.57 1.18.084.936.422.268.512-.374.83-.63.518-.59.03-.06.457-.384.173.177.57-.403.856-.87.794-.496-.005-.484.28-.465-.064-.365.308.098.43-.683.215-.15.624-.46-.41-.545 1.214-.864-.11.04.657-.513-.188-.376.273-.03.883-.636 1.346-.95.13-.8.592-.142.336-.472-.51-.91 1.265-.213-.382-.473.087-.153.733-.503.255-.57-.15-.505.708.785.28-.976 1.59-2.55.354-.82 1.388-.15-.327.173-.9-.48-.184-.65.285-.13.36-1.03.503-.48.64-.082-.495-.312.54-.54-.427-1.166.764-.8-.118.19-.666-.278-.69-.382.5-.033.57-1.285 1.594-.32-.47-.193.636-.73-.207.02-1.03-.422-.284-.208.345.343.504-.286.678-.648.288-.346-.85-.54-.133-.14.297.487.526-1.107.592.654.293-.03.34-.534-.332-.862.566-1.48-.25-.802.336-.118.327-.913.257-.598-.24-.054-.99.668-.207.656-1.075.618.07 1.44-.556 1.068.13.3.788.382-.49.023-.63.65-.196.66.09 1.06-1.237 1.128-1.09 1.4-.92 1.54-.31.593.293.633-.248.11.47-.384.474.324.434.175-.612.752.018.168.417.448.186.06-.48-.72-.5-.034-.29.634-1.28.747-.703.972-.656 1.488-.532 1.112-.857.47.377.413-.113-.128-.61.164-.56.864-1.14 1.118-.702.91-.975-.012-.572.89-4.008 1.087-1.032-.078-.86-2.532 1.092-.77-.192-.158-.525-.425-.258-.106-.58-.413.23-.312.863.347 1.14-.553.447-.446-.205-.745-1.833-.524-.932-.306-.027-.262.637-.273.09-.346-.575-.474-.13-.134-.9-1.523.85-1.362.573-.146.386-1.08.48-.435-.597.527-.57.014-1.493-.145-1.598.736-.574-.388-1.368-.378-.793-.232-1.122-.49-.522-.26.917-.686.11-1.136.452-1.305.073-.683-.16-.543-.4.055-.828-.464-.333-.61-1.254-.628-.335-.562-1.37.616-.473.283-1.024-.433.16.056-.658.28-.502-.417-.564-.142.497-.572-.3.073-.887-.45-.196-.147-.636.146-.726-.527.25.05-.715.6-.065-.318-.87.826.09.17-.954.312-.61 1.845-1.794.413-.568.2.15.015-.895.805-1.4.575-.514.935-.116.657.358.847 1.045.65-.025.995-.758 1.066-1.214.47-.086.073.353 1.083.128.99-.177.997-1.3.035-.34-.286-1.346.03-.77-.56-.89-.165-.735.635.27.682-.53.094-.562-.684-1.13-.68.755-.536-.204-.57.39-.606.042-.183.293-.737.366-.305.735-.382.267-.038-.924-.385-.253-.388.664-.123-.362-.69-.616-1.56-.207-1.202.383-.438.014-.848-.49-1.637-.7-.385-.39-.108-.542.287-.67-.49-.7.242-.62.44-.264.037-.83-.596-.116-.445-.32-.92-.36-.41-.52-.673-.578.045-.542 1.325-.446 1.716-.87 1.165-.5.517.5.587.193.236-.533-.348-.15.052-.48 1.566-.53 1.7-.325.872.078.442.267-.373.804.002.603-.245.394.208.72.588-.03.705.215.855-.027.208.284.545.127.513-.194.598.36.74-1.058.44-.008.27.26.22-.634-.796-.402-.824.162.18-.835-.51-.975-.636-.366-.096-.84.548-.13.567.897-.203.632.265.546.643.676.24-.6-.714-.91.52-1.422-.248-.286-.824.213-.798-.186-.088-.27-.443.2-1.6-.856.062-.648-.287-1.5-.318-.593-.563-.546-1.077-1.436-.5-.572-.56-.214-.71-.99-.743-.63-.01-.173.67-.13.425-.723.308-1.544 1.634.406 2.062-.032.564-.198.94-.656.946-1.085.324-1.172.467-.98.782-.774.365-.6.943-.927.094.29.67.162 1.047-.42.676-.493 1.624-1.587.56-.037.037.254.578-.15.55.095 1.1-.15 1.106-.69 1.117-1.505.433-.316.064.28 1.583.688.12.447-.572.568-.257.02-.013.78.827-.23.057-.415.377-.382.12.226.288-.885.793.817-.14.61.506.17.295.364.44-.583.77-.03.437-.2 1.125.176.577.21-.248 1.203 1.07.276.087.304 1.06.49-.002-.25.73-.37.718-.008.025.278.42.004.41-.416.712-.103.514.133.717.365.313-.11.505.547.243-.245.443.128zm-8.184 63.846l-.01.228-.95-.33.655-1.348.608-.124.392-1.235.483 1.074.377-.38.76.58.023.827-1.09.143-.47.38zm-2.79 2.56l.788-.685-.713-.14-.015-.6.587-.4.424.284.065.598.24-.4.007-.885.516.394.084-.57.455.336.542-.008.415-.32.703.526.035 1.51.878-.136-.55 1.013-1.077-.375.41.648-.296.548-.556-.246.003 1.027-.844.298-.274.43-.53-.394-.55 1.086-.433.116-.466.485-.17-1.168-.652.625-.03-.37-.585-.375-.038-1.055-.564-.433.334-1.222 1.114-.763.683.057zm-1.637 4.87l-.606 1.048-.186-.173zm-3.227 3.48l.46.066-.184 1.078-.765-.16-.118-.375zm-12.64 2.615l-.277 1.09-.994.823.567-1.347.295.17zm-1.815-.57l.548.054-.07.565-.61.57-.443-.474-.347.365-.078-.98.193-.295zm-5.333 1.38l.01.46-.377.24-.2-.514zm5.225-44.755l-.404.465-.053-.466zm-7.18 47.082l.612.28-.12.416-.506-.096zm-8.357-.284l.11.625-.504.17-.054-.644zm-.703.625l-1.02.393-.126-.427.485-.43zm4.107-32.072l.614-.09.056.39.526.008.437.426-.162 1.48-.35.43-.708.162-.233.48-.863-.742-.453-.058-.82-.916-.332-.066-.47-.532-.057-.71.31-.112.905.355.545-.444.48.034.276-.325zm-6.147 32.45l.42.482-1.186.76-.015.17 1.405-.46-.056.395-.6.38-.888.148-.174.46-.997.326-.787-.127-.612.367-1.053.218-.424-.553 1.125-.316.3.148.854-.29-.082-.538.536-.443.596.378.13-.32-.67-.248-.31-.438.453-.547 1.238-.134.113.745zm-8.204 2.818l1.38-.71.16-.4.55-.373.743-.07.31.327-.007.694-1.454.443-.933.898-.65.233zm-3.234.64l.014.53-.794-.165-.003-.352zm4.188-22.102l-.49.377.043-.49zm-7.247 22.392l.082.518-.657.183.044-.516zm11.856-56.158l1.566 1.215 1.188-.37.45.172.326.463-.04.636.818.552.212.373 1.144.414.658.383-.556.663-.536-.298-.644-.004-.39.26-.467.68-.27-.8-.396-.596-.46-.172-.09-.582-.965-.952-.52-.166-.966.362-.533-.47-.09-.674zm-17.667 56.23l-.112.586-.62-.06.26-.456zm-4.007.117l.337.34 1.15.314.003.178-1.436-.164zm-1.922-1.307l.137-.49.49-.054.465.678-.376.387-.36-.142-.043.55-.6-.13-1.412.144-.65-.39.323-.312.735.297zm-7.23-.086l.578.112-.214.615-.674-.326-1.124.412.01-1.078.376.104.307-.7.457.13-.19.535zm-1.914-1.195l.245.36-.532.74-.554.07.168-.512zm-2.972-.955l.5.22.244.757-.756.5zm-23.007-16.622l.354.576-.226.49-1.256-.323-.318-1.142.19-.348z" fill="#ae1818" stroke="#bebebe"/><path d="M175.745 225l-11.658 83.912-25.305-3.77-13.654-7.895-29.42-17.45 1.792-3.057 2.51-.085.92-1.152-.128-2.86-1.644-.408.293-5.612 2.857-1.602.757-2.102.222-3.544 1.948-2.286 2.088-.593 1.814-1.65-1.946-2.548-.87-4.177-1.472-2.797.368-1.848 1.11-1.87.283-2.784-.408-3.005 1.012-8.744 4.385.283 1.058 2.045 1.167.142 1.694-2.262 2.275-11.84 41.047 7.013z" fill="#c43e3f" stroke="#bebebe"/><path d="M346.336 242.805l51.008-1.898 1.213 2.8-1.703 1.914-1.716 2.898 7.67-.48-.207 2.807-1.706.932-.245 2.316-2.07 2.595.42 3.587-1.024 2.69-1.16.48.803 1.266-1.846 1.26-.71 2.586-1.22.727.366 2.933-2.146.94.12.978-2.395 2.59.82 1.597-2.08 2.488-1.71 4.676 2.25 1.85-1.012 1.282.834 3.07-.842 2.09-30.184.902-5.346.123-.164-7.932-1.76-.62-2.407.78-1.3-1.37.237-26.3-2.473-16.527z" fill="#6f0307" stroke="#bebebe"/><path d="M34.283 118.13l9.005 2.524 14.088 4.16 10.958 2.892-6.408 25.08-4.793 18.328 11.07 16.65 10.715 16.112 8.636 12.957 6.32 9.5 11.342 17.142-.368 1.848 1.47 2.797.872 4.177 1.946 2.547-1.814 1.65-2.088.594-1.948 2.286-.222 3.544-.757 2.103-2.856 1.603-.292 5.612 1.644.41.128 2.858-.92 1.152-2.51.085-16.396-1.973-13.38-1.605-1.025-2.244.62-3.044-.106-3.798-1.127-2.943-2.928-4.373-4.004-4.39-1.122.658-1.694-.994.605-1.37-1.372-3.446-2.947-.043-4.398-3.363-.275-1.926-2.753-2.972-3.758-.873-2.844-1.75-4.025-.628-1.553-2.443 1.52-3.92-.536-.82 1.204-2.734-2.484-2.953.658-2.963-1.097-.465-1.213-3.045-1.176-.915-.136-1.736-2.764-7.14-1.58-2.314.867-4.783.76.64 1.58-2.542-.907-2.977-2.07-.24-1.948-3.025-.408-2.078.68-1.683-.636-2.656 1.085-3.785 2.078.593.65-5.53-1.07.29-.927 2.552-2.354-.08-2.05-2.73.563-3.51-.913-3.174-1.748-2.31-.647-2.246-2.14-4.664.87-.938-.053-5.24 1.458-2.474.258-4.29-1.586-4.766-2.034-3.023.268-2.748 4.61-5.444 1.17-1.956-.022-1.805 2.298-4.01.328-4.18-.864-1.29 1.418-2.99z" fill="#084882" stroke="#bebebe"/><path d="M196.306 167.24l24.158 2.847L239 171.743l22.135 1.646-.955 14.968-2.74 44.955-11.214-.853-15.637-1.182-29.542-2.995-6.437-.84L175.746 225l2.39-17.312.037-1.65 1.804-12.59 3.9-27.767z" fill="#73386e" stroke="#bebebe"/><path d="M576.923 129.895l13.364-3.13.062.237 2.226 8.556-.294 1.515-1 .005-4.408 2.313-5.662 1.083-1.923 2.584-2.44 1.27-2.67 2.413-1.168-1.49 2.272-2.23-1.053-1.01-1.944-11.152zM558.956 168.404l-.64 1.988-.94 1.213.748 2.27 2.114 1.805 1.22 3.51 3.217 3.238 1.137-.085 1.62 4.934-7.296 1.44-5.03-18.215 1.527-2.01z" fill="#0f5ba0" stroke="#bebebe"/><path d="M543.45 184.084l1.705 1.16-1.164 1.827-1.28-1.916z" fill="#084882" stroke="#bebebe"/><path d="M461.19 317.826l6.2-.786 2.23 4.087 17.414-1.192 16.327-1.12 1.083 3.05 1.51-.305.113-3.062-.89-2.667 1.005-1.3 3.073.773 3.53.037 1.743 6.24 2.71 6.904 5.187 8.805 7.322 9.085-.73.86 1.043 4.59 3.273 4.793 5.54 9.81 1.344 3.128.494 3.353.576 12.238-1.2.446-.692 3.947.637 1.117-2.12 3.12-1.132-.466-2.315 1.517-4.16 1.317-1.488-1.31.237-2.315-4.006-5.967-2.52-.832-1.908 1.188-2.146-3.34-.88-2.882-3.243-2.858-.97-2.058-.027-3.178-1.598-.336.63 1.784-1.302.68-5.32-7.31-1.935-1.768 3.103-6.407-2.524.69-1.455 2.084-2.12-2.646 1.154-8.34-.517-6.725-1.777-1.39-.797-2.1-2.528-.142-3.363-3.148-2.51-1.138-.43-2.157-1.714-.592-1.645-2.244-5.296-2.6-4.16 1.257.488 2.235-1.446-.232-4.987 3.382-5.6 1.3-.043-1.63-1.547-1.79-7.108-3.644-4.93-1.367-4.296-.058-3.52.67-7.61 2.095 1.683-2.358-1.085-1.13.267-2.477-3.098-2.585.243-1.985z" fill="#73386e" stroke="#bebebe"/><path d="M483.155 254.898l-2.125 3.512.01 1.57 4.44 2.62 1.218-.416 2.297 2.988.636 1.647 2.355 2.808 3.05 1.463 1.996 2.523 3.63 2.028.12 1.72 2.55 2.43 3.62 1.764 1.18 2.3.62 3.13 1.845.788 2.575 3.648.462 2.49 3.047.838-2.26 5.483-.137 2.666-.943 2.46.228 2.358-1.207 1.26.423 6.366-3.53-.037-3.072-.774-1.003 1.3.89 2.668-.113 3.062-1.51.305-1.083-3.05-16.326 1.12-17.414 1.192-2.23-4.087-1.844-3.89.443-3.992-1.746-4.317.802-2.64-.284-1.856 1.89-2.112-1.53-.726.372-1.523-1.627-2.197-1.894-3.978-5.13-18.44-3.527-12.55 15.397-1.877 8.39-.985z" fill="#d05153" stroke="#bebebe"/><path d="M208.36 404.478l-3.468-1.28-.544-1.296.447-3.326-2.48-5.662 1.91-1.87 1.37-2.597-1.005-1.695.3-1.78 3.914 2.083 4.377 1.51 2.7 2.25.015 1.943 4.016 3.127-2.436 2.613-4.372 1.248-3.063 1.965zm-13.442-30.71l1.607 2.015 2.06-.894 4.513 2.327-.68 2.104-4.584 1.066-.918-.402-.235-2.586-2.368-.56-.918-1.454zm-5.495-2.66l-1.373 1.533-3.204-.002.993-1.694zm-13.47-7.204l1.51 3.473-.77 2.014-2.973.312-1.962-4.123 1.752-.073zm-21.006-7.953l1.594.177.746 1.536-.475 2.17-1.61 1.355-4.39-1.737.557-2.408z" fill="#084882" stroke="#bebebe"/><path d="M132.202 36.118l-3.148 14.705 2.318 4.696-.778 3.96 1.532 2.137 1.877 1.05.006 1.073 2.914 4.638.117 1.674 2.33 2.034-.08.975 2.927.494-2.492 5.126-.95 3.367.616 2.437-2.147 1.23.425 1.658-.817 1.495 1.882 1.943 2.902-1.507 1.31-1.402 1.57 1.788-.507 1.144.48 2.986 1.13 3.274 1.045 1.27-.577 2.79.966 1.42 2.123.555.505 4.975 1.05 1.017 1.327-1.17 3.232.653 2.614-.868 1.3.967 2.558-.227.378.89 2.203-.21 2.89-2.66 1.234 2.84 1.637 1.83-5.818 36.45-12.08-1.918-20.233-3.68-31.972-6.75 5.99-26.627 2.434-4.47-.583-1.382-1.928-.685-.284-2.154 3.252-4.693 1.174-.237 1.545-1.907.132-1.387 1.563-1.486 1.176-2.404 3.058-3.82-.397-2.167-2.152-1.557-.834-2.764.512-2.546-.75-2.828.43-1.148 4.278-19.258 4.1-17.715z" fill="#6f0307" stroke="#bebebe"/><path d="M386.522 151.377l20.09-1.085 10.68-.867-.11 2.882 1.96 3.197 2.217 5.308 3.083 35.19-1.002 2.805 1.716 3.06.422 2.598-1.25 2.253-.203 1.994-1.795 3.37-1.3.357.474 1.853-.82.81-.4 3.574.462.95-1.345 2.252 1.3 2.526-4.663 1.78-.324 1.59 1.242 1.876-1.374 1.343-4.46-1.962-1.33.263-1.6 2.748.635.777-1.87-.03-2.92-4.073.89-1.048-1.153-2.8-.157-2.292-3.956-2.944-1.247.41-1.39-1.886-3.597-2.822-.08-2.38 1.717-3.966-.398-1.373 1.016-1.87-1.69-.966-2.54-.505-1.23 1.468-.927-.852-1.023-4.87-3.963-2.992-3.663-3.675-1.64-4.518-.266-3.025.88-2.176.053-2.71 3.034-1.793.186-2.306 1.384-1.55.043-2.627-1.93-2.032.59-2.654 4.245-.968 3.326-2.08.224-2.31 1.382-1.066.243-2.885-.414-1.86-2.536-1.322-.39-1.534z" fill="#0f5ba0" stroke="#bebebe"/><path d="M438.06 158.443l12.913-1.447.115.976 2.16 17.727 2.27 20.787-.79.754 1.412 3.965-1.984.315-1.96 1.63-3.006-.32.452 2.92-1.804 1.44-.547 1.958-1.928.952-.67 3.867-1.22 1.12-2.73-1.12-.616-1.668-2.33 2.132.353 1.613-2.534.83-.9-1.398-2.766 1.75-.803 1.64-3.113-1.937-1.473.627-1.105-.972-.855 1.146-2.895.416-.96 1.48-.46-.95.398-3.573.82-.81-.474-1.854 1.3-.36 1.795-3.368.203-1.994 1.25-2.253-.422-2.598-1.715-3.06 1.003-2.806-3.084-35.188 1.167.882 3.36-.31 3.074-2.02z" fill="#c43e3f" stroke="#bebebe"/><path d="M377.897 137.022l1.64-.08.23 2.194 1.66 1.387-1.202 1.86.525 3.33.95 2.323 3.945 1.507.877 1.834 2.535 2.557.39 1.534 2.536 1.323.414 1.86-.243 2.886-1.382 1.067-.224 2.31-3.326 2.08-4.245.968-.59 2.655 1.93 2.032-.043 2.628-1.384 1.55-.186 2.306-3.033 1.794-.052 2.71-1.25-.432-2.402-2.926-1.157.134-15.878.987-15.35.496-12.665-.14-1.287-1.964.604-3.853-1.098-3.357.058-3.768-1.933-1.31-.298-2.047.664-1.8-.718-2.62-1.497-.985-1.945-6.715-2.002-3.282.962-2.2.37-2.94.833-1.06-1.348-1.476.368-2.61-.58-1.23 1.41-.318z" fill="#73386e" stroke="#bebebe"/><path d="M261.842 188.463l74.278 2.037 1.12 1.385 3.658 1.112-2.493 4.373 1.443 1.462 1.846 3.506 2.443.705.408 32.323-64.188-.913-22.916-1.14 2.74-44.955zM466.506 200.177l2.816 1.704 1.668-1.293 4.45.562 1.044-1.634 1.55-.71.848 2.45 1.365.222 1.846 1.81.32 4.513 1.786 2.648 2.138 1.93.814 1.623 2.457 1.383 1.55.02-3.844 4.627-3.94 2.8.16 1.136-1.58 1.216.052 1.317-2.154.876-.544 1.73-5.99 2.95-.16.27-10.022 1.094-8.784.533-2.292.422-13.034.794-14.76 1.695-2.627-.435.42 2.68-14.656.968-1.408.263.514-1.926 1.786.53.53-6.123-.637-.776 1.6-2.748 1.33-.263 4.46 1.962 1.375-1.343-1.242-1.877.324-1.59 4.662-1.78-1.3-2.526 1.346-2.253.96-1.48 2.894-.416.855-1.145 1.106.972 1.474-.627 3.113 1.937.803-1.64 2.765-1.75.9 1.397 2.534-.83-.354-1.612 2.33-2.133.617 1.668 2.73 1.118 1.22-1.12.67-3.866 1.928-.952.548-1.958 1.804-1.44-.452-2.92 3.006.32 1.96-1.63 1.984-.315-1.412-3.964.79-.753 4.342-.522 2.678 2.81.35 1.28z" fill="#6f0307" stroke="#bebebe"/><path d="M357.866 294.678l30.184-.902 1.24 1.655-.848.7.02 3.027 1.932 1.782.504 4.39-1.326 3.503-2.84 2.268-.594 3.38-1.254-.267.05 5.47-1.512.233 1.035 2.89-.852 1.1 23.918-1.337-.93 4.96 2.302 3.112.652 2.404 1.643 1.438-3.647 2.282-.186 1.48 3.154.77 1.174-2.445 2.83 2.168-.08 1.88-1.49.92-2.935-.534.444 1.355-.846 2.173 2.596 1.698 3.997.29 1.573 2.086 1.157.24-1.873 2.66-2.304-.324-2.094-2.458-4.834-1.062-.162-2.513-2.28.96.275 2.098-.942 2.01-1.68.43-1.408-2.112-2.978.093-.934 2.33-1.95.758-2.202-1.263-1.71-.073-1.814-3.567-2.976-1.48-1.118.296-1.272-3.03-3.364.556-.15-1.865-3.236 1.927.48 1.363-2.49 1.4-3.98-.502-4.654-1.876-3.27-.795-6.957.915-.904.59-1.16-1.437 2.902-5.355-1.05-2.824.873-1.568-.468-2.025 1.218-1.578 1.224-3.86-.292-3.174-3.602-5.948-.144-3.26-2.818-3.206-.314-15.275z" fill="#a30505" stroke="#bebebe"/><path d="M597.805 108.77l-1.53-.686-.216-1.465-2.096-1.21-5.764-18.717-2.99-9.138 3.82-3.14-.992-.824 1.046-2.643 1.417-1.484-.565-.77 1.216-1.77-1.183-2.365-.064-4.022 1.167-1.672-.52-4.144 4.436-13.035 1.888-.043.875 2.605 1.55.558 2.68-2.477 1.967-.585 1.077-1.42 3.385 1.425 2.16 1.37 4.964 15.847.947 3.87 3.733-.044.015 1.783 1.352 1.282-.276 1.618 2.095 1.734 1.712-1.046 3.392 4.48-1.382 2.907-1.477-.477-.508 1.864-1.554.054.243 1.374-1.926.422-2.063 3.95-1.357-1.888-1.1.16 1.18 2.113-2.004 1.792-1.09-1.63-.833 1.267-2.613.77-.676-2.093-1.417.925.712 1.404-.537 3.553.53.78-1.402 2.274-2.084-.08-.605 2.126-1.504.683-.87 1.858-1.665.13-.89-1.445-1.606 3.16 1.058 1.4-1.542 1.02.257 1.37-1.47 2.182z" fill="#0f5ba0" stroke="#bebebe"/><path d="M558.343 196.91l-.25.052-.31.066zm-44.19-18.394l40.954-8.014 5.03 18.216 7.295-1.44-.845 6.66-1.68.624-2.905 1.56-2.28 1.163-.456-2.42-1.135-.763 1.076-1.322-2.245-2.036-.332 1.162-2.398.256-1.36-2.48.74-.156-.666-3.465.448-1.52-1.96-4.448.642-2.987 1.785-.882-.297-2.873-1.328.62.246 1.456-2.53 2.462-.503 1.865.705 4.295-.687 2.237 1.193 3.272 1.966 2.02.184 1.806 1.3 1.572-.244 1.31-3.087-1.79-3.945-.362-1.57-2.025-1.842 1.71-1.158-1.61 1.214-2.586.515-2.53 1.165-1.827-1.704-1.16-.74 1.07-1.747-1.073-2.474-.26-.43-2.174-1.46-.966-1.76.093-2.077-3.858-1.888.364-2.15-1.01-.82 1.325-1.844.263-.124 1.692-3.49-.44-1.802 2.58-1.556-.22-1.757 2.898-1.966 1.764zM596.244 111.817l1.092-.042 1.086 2.416.098 2.177-1.154 2.345.538 2.227 2.392-.31 2.01 1.912.264 1.878 1.287.157.57 1.626 3.35.604 3.044-2.296-.2 2.183-4.57 3.14-1.84.59-1.473-1.043-1.638.868.218 1.044-1.812 1.165-1.514-2.392-.417-.397-1.38-.734-1.48-3.248-1.566.414-2.8.902-.063-.238-13.364 3.13-4.637.964-.367-.5.234-10.156 8.58-1.88 12.3-2.683.788-1.65z" fill="#084882" stroke="#bebebe"/><path d="M465.77 155.55l-14.682 2.422-.115-.976-12.914 1.447-9.1.92 2.023-2.17 1.158-3.488 1.164-2.173.717-2.95.173-4.13-.69-4.364-4.034-8.29.662-3.348-1.088-3.825 2.023-4.22.175-3.376-.528-1.747 1.644-.907-.026-2.453 2.616-.933 1.762-2.892.415 5.358 1.114.123 1.073-2.824-.45-4.533.724-1.227 2.753-1.05-1.27-3.045 1.554-2.877 2.29-.434 2.798 1.38 2.568-.072 1.504 1.94 1.942-.082 3.474 1.516 1.12-.23 2.176 2.91-1.194 1.882 1.657 1.996.85 2.43.106 5.576-1.944 1.656-.146 2.897-2.414 1.3-.953 3.576.686 1.228 2.712.884 1.728-2.12 1.807-4.11 3.435-1.95 1.945.88 1.392 1.946 1.974 5.984.612 3.047 1.7 3.553-.348 5.5-1.65 1.06-.334-1.935-1.096.732-.737 4.643-1.954 2.002-.19 3.494-2.355 3.206zm-28.963-56.456l.367 1.757-1.32.474.288-2.565zm-20.626 11.532l-1.73-1.4.782-2.19-2.473-.11.79-2.11-.11-2.598-2.302-1.596-1.34-1.76-4.515-1.1-1.315.59-4.556-1.854-10.766-2.28-1.275-2.44-1.955-.775 3.875-1.778 1.67-1.89 4.41-1.027 2.735-2.384 1.327-.178.996-1.614 2.99-2.418 1.454-1.98 2.273-1.4 2.347.858-3.607 4.84-.82 1.607.274 2.736 1.776-2.254 3.526.03 2.85 1.215 2.813 3.812 1.407.603 2.508-.886.7.83 2.616.234 5.123-3.936 2.803-.62 3.8-.252 2.428-1.413 1.935-.304.865 4.057 2.072.33 1.93-.884.953.864 1.19-1.37 2.9-.767.702 5.14 1.618 2.002 2.09.304.037-1.477 1.96-.256 1.265 1.39-.75 1.244-5.734-.244-2.614.98-3.134-1.418-.65 1.71.557 1.325-1.332-.17-2.145-1.79-3.45-.83-1.69.107-1.416 2.114-2.65.775-2.966-.096-1.1.928-.117 1.644-3.08 1.695-.022-1.956-1.45-.267-.367 2.075-2.366.308-.99.99-1.266 3.625-2.56 4.72zM400.283 69.19l-2.38 2.037-1.298.337v-1.536l6.02-3.927-1.012 2.504z" fill="#698fc1" stroke="#bebebe"/><path d="M368.988 89.803l-.81-.614-2.018 1.295.34 8.746-.585.917-2.893 1.325-2.27 3.245-.102 2.116 1.2.123 1.373 1.822-1.12 2.316.316 2.51-.562 5.476 2.86 2.588 2.203.162 1.162 1.585 3.307 1.495.605 1.932 3.133 2.39 1.713.49 2.2 3.158-.173 2.378.67 1.683-1.64.082-54.42 1.197.127-26.724-2.387-1.72-1.8-2.86 2.864-3.145.237-1.702-.358-5.923-1.227-1.548-.815-3.246.2-3.964-.384-.65-.25-9.456-1.93-5.02-.733-2.828-.255-5.958.676-2.002-1.24-4.673 20.456.04-.05-5.612 1.933.14 1.3 1.108 1.394 7.604 1.043.87 3.256.186.394.716 3.805.243.472 1.597 3.25-.483-.016-.644 2.528-.875 2.235.255 2.593 1.12.76 1.503 1.463-.214 1.486 3.246.602-1.392 2.48-.744.494 1.348 2.99.837.057 1.286 1.525.98 2.98-.71 1.73-1.54 2.41-1.014.992 2.123 1.667-.578 2.05.365 2.33-.464 2.794 1.68 2.55-.49-.165.818-3.223 2.07-4.578 1.732-2.94 1.703-4.156 4.022-1.766 2.434-2.76 2.802-4.412 3.755z" fill="#87a1cd" stroke="#bebebe"/><path d="M418.936 261.906l3.224-.26 1.38 1.447-.378 16.466-.562 28.502 2.777 22.595-1.344.76-3.096-.086-1.33-.878-3.022.877-4.14 2.007-1.255 1.147-1.643-1.438-.652-2.404-2.303-3.113.93-4.96-23.917 1.336.852-1.1-1.035-2.89 1.513-.234-.05-5.47 1.253.268.593-3.38 2.842-2.267 1.326-3.503-.504-4.39-1.933-1.783-.018-3.027.847-.7-1.24-1.654.842-2.09-.834-3.07 1.013-1.28-2.25-1.852 1.71-4.676 2.08-2.487-.82-1.595 2.395-2.59-.12-.978 2.145-.94-.367-2.934 1.22-.727.71-2.585 1.846-1.26-.805-1.264z" fill="#b92b2c" stroke="#bebebe"/><path d="M374.81 180.41l1.156-.134 2.403 2.926 1.248.432-.88 2.176.267 3.025 1.64 4.518 3.662 3.675 3.963 2.99 1.023 4.873.926.853 1.23-1.468 2.54.506 1.69.966-1.015 1.87.398 1.374-1.716 3.967.08 2.38 3.596 2.82 1.39 1.886 1.246-.41 3.955 2.945.157 2.292 1.153 2.8-.89 1.047 2.92 4.074 1.87.03-.53 6.125-1.785-.53-.514 1.926-.775.054-.644.044.315 3.678-2.082 3.92-7.67.482 1.716-2.897 1.703-1.912-1.213-2.8-51.008 1.897-1.682.026-.11-7.464-.407-32.323-2.443-.705-1.846-3.506-1.443-1.462 2.493-4.373-3.657-1.112-1.12-1.385-2.794-3.92-2.41-4.826 12.667.14 15.35-.497z" fill="#c43e3f" stroke="#bebebe"/><path d="M249.095 53.522l-1.36 16.676-2.45 28.208-1.13 14.012-.173-.014-19.356-1.918-32.92-4.002-20.43-3.046-1.175 7.727-1.636-1.83-1.233-2.84-2.89 2.66-2.204.21-.378-.89-2.558.227-1.3-.967-2.613.868-3.232-.654-1.326 1.17-1.052-1.018-.505-4.975-2.122-.555-.965-1.42.577-2.79-1.046-1.27-1.13-3.274-.48-2.986.507-1.144-1.568-1.787-1.31 1.403-2.903 1.507-1.88-1.943.816-1.495-.425-1.657 2.148-1.23-.615-2.438.95-3.367 2.492-5.126-2.927-.493.08-.974-2.33-2.034-.116-1.674-2.915-4.638-.007-1.074-1.877-1.05-1.532-2.136.778-3.96-2.318-4.697 3.148-14.705 44 8.408 19.967 2.984z" fill="#ae1818" stroke="#bebebe"/><path d="M249.36 142.62l18.27 1.328 33.713 1.442.335.744 5.502 2.826 1.333-1.445 1.533.355 5.093.078 5.665 2.836.698 2.13 1.962.42 1.946 6.716 1.498.985.718 2.62-.664 1.8.3 2.047 1.932 1.31-.058 3.768 1.098 3.357-.604 3.852 1.287 1.964 2.41 4.827 2.793 3.92-74.278-2.037-1.662-.105.955-14.97L239 171.744l2.527-29.76z" fill="#6f0307" stroke="#bebebe"/><path d="M99.998 135.267l31.97 6.75-14.173 73.42-2.276 11.84-1.695 2.263-1.167-.142-1.06-2.045-4.384-.282-1.012 8.745.407 3.006-.285 2.786-1.11 1.87-11.342-17.142-6.32-9.5-8.635-12.958-10.715-16.113-11.07-16.65 4.793-18.328 6.408-25.08 13.822 3.552zM585.21 77.555l2.99 9.138 5.764 18.717 2.095 1.21.214 1.464 1.53.685-.468 3.005-1.092.042-2.422 2.174-.788 1.65-12.3 2.683-1.2-.877-.425-2.17.716-1.022-.635-2.03-.745-6.297 1.09-3.31.073-3.47.597-1.417-.97-3.538 3.07-2.228 1.037-2.883-1.568-2.112.77-2.728-.485-1.386.46-4.077 2.426-.225z" fill="#73386e" stroke="#bebebe"/><path d="M567.385 145.988l4.095 1.226-.307 4.535-1.56 1.375-.432 2.457 3.246.42.634 1.618.52 8.133-2.087 6.633-1.86 2.195-1.17 4.138-1.58-2.166-3.494-.477-4.66-2.332-.715-2.11-.13-.308.43-.933.64-1.988 2.692-1.856-.07-1.16 2.83-3.158.25-1.402-3.783-2.256-.532-1.813-1.48-.174-.494-1.654 1.096-2.93-1.23-1.32 2.044-3.65.23-1.732 1.18-1.36z" fill="#0f5ba0" stroke="#bebebe"/><path d="M194.61 227.442l6.438.84 29.54 2.996 15.638 1.182-.55 7.445-.45-.034-2.82 37.104-1.392 15.074-1.11 14.91-44.243-4.126-.504 1.422 1.243 1.863-20.96-2.52-.866 6.717-10.487-1.402L175.745 225z" fill="#698fc1" stroke="#bebebe"/><path d="M563.374 87.586l.842 2.978.093 2.826 1.59 2.38.392 2.84-.475 3.218 1.867 3.744-.28 1.327 2.23 1.977 2.095 10.082.424 1.242-.235 10.155.366.5 1.945 11.153 1.054 1.01-2.272 2.23 1.168 1.49 4.903.078.732-1.107 3.958-.978 1.886-.98 2.714-3.137.66 1.607 1.892.277-3.407 3.15-7.564 5.257-3.352 1.487-2.358.396-1.556 1.127-1.517-2.168.307-4.536-4.095-1.226-5.696-2.05-.71-.93-1.668.295-2.5-2.04-.248-2.21-1.666-1.388-.803.262-1.614-1.738-47.293 9.29-.64-3.708-.042-.242 5.838-5.344.69-2.2 1.855-1.75-1.27-2.344-.96-.324-1.363-3.905 5.882-2.82 5.5-.958 2.272-.023 2.68 1.14 1.375-.938 4.575-.835 2.554-1.607 2.385-3.246 1.876-.478-.785-4.005.482-2.52-2.672-1.103.126-1.942 3.617-3.35 1.064-2.48 3.894-5.937 4.1-3.504 7.025-1.2z" fill="#084882" stroke="#bebebe"/><path d="M504.872 228.066l8.015-1.058 9.13-1.478 42.168-8.393 2.593 5.566-3.36.134-.292.817-3.76 1.715-.405.922-2.563.782.343 1.018 3.04-1.385.58.55 3.354-1.464 1.44 1.118 1.982-1.012 1.528 3.36-.34 1.835-1.373.464-2.18 4.237-3.89.985-.127 2.62 2.197 2.138 1.458.196-1.67 4.62-2.24-.04-3.685 1.172-2.422 1.408-3.545 3.626-2.547 4.335-.808 4.99-2.7-.567-4.16 1.78-16.083-11.588-13.417 1.997-.078-1.73-2.227-2.216-1.095 1.09-.31-1.53-14.757 1.5-3.176 1.035-2.35 1.74-3.982 1.543-6.05 1.057-8.392.986-.106-3.537 2.31-.62.604-2.554 2.647-2.57 3.237-.507 2.615-2.666 2.932-1.227 2.12-3.69 1.476-1.2.53 1.415 4.228-3.508 2.206.256 1.068-2.978 2.07-1.058-.016-3.565z" fill="#73386e" stroke="#bebebe"/><path d="M316.2 56.8l1.24 4.672-.675 2.002.256 5.958.735 2.83 1.93 5.018.25 9.456.384.65-.202 3.965.815 3.247 1.226 1.548.357 5.923-77.232-3.662 2.45-28.208 1.36-16.676z" fill="#a30505" stroke="#bebebe"/><path d="M497.08 147.178l3.255 19.8-1.497 1.075 1.05 1.49.31 2.275-.94 3.807-.16 5.59-3.593 5.472-1.313.87-1.38-.783-.968 2.306-1.306.116-.99 3.053.566 1.656-.97 1.556-2.01-2.023-1.58 3.88.89 2.19-1.25 1.012-.153 2.012-2.947.755-1.846-1.812-1.365-.223-.848-2.45-1.55.71-1.045 1.634-4.45-.563-1.668 1.294-2.816-1.703-3.62-.122-.348-1.28-2.678-2.81-4.34.522-2.273-20.788-2.16-17.728 14.684-2.42 4.513 1.456 1.602 1.02.918-1.286 2.722 2.016 1.6.516 4.8-2.685 3.047-.043 2.8-3.244 4.276-3.405 5.033-2.72z" fill="#73386e" stroke="#bebebe"/><path d="M280.357 234.453l64.188.913.11 7.465 2.472 16.53-.238 26.298-4.72-1.57-1.227-1.706-3.16-1.443-.793 1.315-3.147-.063-.673-.815-2.875 1.482-1.207-.82-2.612.737-2.42 2.285-.934-1.313-2.54-1.08-2.68-.02-.854-1.727-3.118 3.322-.982-1.896-1.414.553-1.053-1.244-2.857-1.194-2.178 1.924-.896-2.065-1.733-.283-.965-1.66-2.32-.71-1.57 1.353-.97-1.255-2.405.097-2.627-1.39-2.47.083-.77-2.894-3.847-.303-1.48.435-2.608-2.973-.936.125 1.22-28.994-21.386-1.106-14.007-.945.55-7.445 11.214.853z" fill="#6f0307" stroke="#bebebe"/><path d="M52.03 58.694l.966.114 1.68 2.096.424 1.982-.75 4.43 4.69 3.034 5.015-1.038 2.8.523 2.962 1.652.074 1.03 6.034-.568 1.13 1.054 3.07.384 2.836-.774 4.71-.138 4.087.688 1.606-.605 20.78 4.97.835 2.763 2.153 1.556.398 2.165-3.057 3.82-1.175 2.405-1.563 1.486-.133 1.387-1.546 1.907-1.174.237-3.252 4.692.284 2.153 1.927.685.582 1.383-2.434 4.47-5.99 26.627-17.842-4.01-13.822-3.55-10.958-2.892-14.088-4.16-9.005-2.525-10.3-3.008-.986-2.1.62-4.858 1.16-3.15-.645-2.937 1.742-2.028 1.91-3.6 2.763-3.593 1.77-3.385 4.793-11.746.332-1.686 2.597-4.994 2.596-7.196.682-4.204 1.216-2.26 4.57-.912 1.244 2.146z" fill="#4b7eb6" stroke="#bebebe"/><path d="M504.547 141.772l.64 3.71 47.294-9.293 1.615 1.737.803-.262 1.666 1.39.247 2.208 2.502 2.04 1.668-.294.71.93-1.182 1.36-.23 1.73-2.045 3.65 1.23 1.32-1.095 2.932.493 1.654 1.482.173.532 1.812 3.782 2.256-.25 1.402-2.828 3.157.07 1.16-2.692 1.857-2.323.09-1.526 2.008-40.954 8.014-11.598 1.972-2.22-13.51-3.254-19.8 1.88-1.14 5.545-4.508z" fill="#73386e" stroke="#bebebe"/><path d="M597.992 130.065l1.514 2.392-2.016.877zm-4.843-3.965l1.564-.414 1.482 3.248 1.38.734-1.344.104-.54 2.43.443 3.1-3.853 1.77.294-1.514-2.227-8.556z" fill="#084882" stroke="#bebebe"/><path d="M487.137 253.355l2.35-1.74 3.176-1.036 14.758-1.5.31 1.53 1.095-1.09 2.227 2.217.078 1.73 13.417-1.997 16.082 11.59-1.975 1.113-2.2 2.898-1.9 4.25.084 3.144-1.636 2.782-2.735.48-.293 1.877-2.542 2.43-1.25 2.37-2.402 1.316-2.38 2.715-.097 1.092-2.364 1.63-2.263 3.59-3.048-.837-.462-2.49-2.575-3.648-1.845-.788-.62-3.13-1.18-2.3-3.62-1.764-2.55-2.43-.12-1.72-3.63-2.027-1.994-2.522-3.05-1.462-2.355-2.81-.635-1.646-2.297-2.988-1.217.417-4.44-2.62-.01-1.57 2.125-3.512z" fill="#c43e3f" stroke="#bebebe"/><path d="M245.285 98.406l77.232 3.662-.236 1.703-2.862 3.147 1.8 2.858 2.386 1.72-.126 26.724-1.41.318.58 1.228-.368 2.61 1.348 1.478-.832 1.058-.37 2.94-.963 2.2 2.002 3.283-1.962-.42-.698-2.13-5.666-2.837-5.094-.078-1.533-.355-1.333 1.445-5.502-2.826-.335-.744-33.712-1.442-18.27-1.33-7.833-.634 2.455-29.58.172.014z" fill="#a30505" stroke="#bebebe"/><path d="M422.06 239.11l-.42-2.68 2.63.435 14.758-1.696 13.034-.795 2.292-.422 8.784-.533 10.023-1.095.16-.27 23.314-3.123.016 3.565-2.07 1.058-1.068 2.978-2.206-.256-4.23 3.508-.528-1.415-1.475 1.2-2.12 3.69-2.934 1.227-2.616 2.666-3.237.506-2.646 2.57-.603 2.554-2.31.62.106 3.537-15.397 1.88-21.038 1.866-10.118.96-3.224.26-22.12 1.54 1.16-.48 1.023-2.69-.42-3.588 2.07-2.595.244-2.316 1.707-.932.208-2.808 2.083-3.92-.314-3.68.645-.043.776-.053 1.408-.262z" fill="#6f0307" stroke="#bebebe"/><path d="M259.684 240.85l21.386 1.106-1.22 28.994.935-.125 2.607 2.973 1.48-.435 3.85.303.767 2.894 2.47-.084 2.627 1.39 2.406-.096.97 1.255 1.57-1.353 2.32.71.964 1.66 1.732.283.895 2.065 2.178-1.924 2.858 1.193 1.054 1.243 1.414-.554.982 1.895 3.118-3.322.854 1.727 2.68.02 2.54 1.08.934 1.312 2.42-2.285 2.612-.736 1.207.82 2.875-1.483.673.815 3.147.063.793-1.316 3.16 1.442 1.226 1.705 4.72 1.57 1.3 1.37 2.406-.78 1.76.62.164 7.934.314 15.276 2.818 3.205.144 3.262 3.602 5.95.29 3.172-1.223 3.86-1.218 1.58.468 2.024-.872 1.568 1.05 2.824-2.902 5.355 1.16 1.437-2.113.128-6.67 2.154-2.42-1.103-.455-2.43-1.67 1.727-1.205-.393-.613 2.12 1.353.88.244 2.758-2.38 2.95-3.884 3.683-7.838 3.92-.786-.65-2.36.97-.07-.892-3.218.636-1.49-1.874-.93.4 3.41 3.83-2.514 1.2-2.36-.745-.38 2.672-2.974 2.725-3.09 5.062-2.03 5.308-1.444-.426-.394 1.933 1.533-.46-.786 3.865-1.022.145-.11 2.178 1.223 1.23.298 4.442 1.445 1.552.328 2.825 1.145 2.512-4.15 1.47-1.664-1.96-3.154-.784-4.2.07-3.545-2.503-2.712-.315-2-1.993-2.766-.73-1.845-1.917-1.092-4.476-2.31-2.748.372-2.25-1-2.463.44-2.087-1.577-2.405-1.363-.296-2.154-2.192-.61-2.698-1.838-2.51-2.708-2.146-1.156-4.515-1.228-1.276-1.54-3.647-.424-2.947-1.526-2.19-2.664-2.007-.568-1.332-2.48-1.273-1.79-3.357-5.586-1.064-3.386-.05-2.807-1.326-.737 1.5-3.13.273-2.54 2.917-1.772 4.84-.783.023-1.99 2.783-2.134-.08-3.012-2.516-7.686-4.302-1.382-2.076-2.932-2.136-1.795-4.408.21-3.82-1.878-3.28-.236-2.72-1.227-1.835-4.677-2.99-2.285-3.67-2.012-1.435-1.967-3.157-2.995-1.876-1.77-4.132-1.756-1.015-1.244-1.863.505-1.422 44.243 4.127 1.11-14.912 1.392-15.074 2.82-37.103.452.035z" fill="#a30505" stroke="#bebebe"/><path d="M152.202 145.697l12.08 1.918-2.363 14.797 21.955 3.27-3.9 27.767-1.803 12.587-.036 1.65-2.39 17.313-16.904-2.55-41.047-7.013 14.174-73.42z" fill="#6f0307" stroke="#bebebe"/><path d="M582.06 82.854l.483 1.386-.77 2.728 1.57 2.113-1.037 2.884-3.072 2.228.97 3.538-.596 1.416-.074 3.472-1.09 3.31.747 6.295.636 2.03-.717 1.024.424 2.17 1.2.876-8.58 1.88-.425-1.244-2.096-10.083-2.23-1.978.28-1.328-1.867-3.744.475-3.22-.393-2.838-1.59-2.38-.094-2.826-.842-2.978 10.562-2.46z" fill="#084882" stroke="#bebebe"/><path d="M527.415 180.024l6.75 3.807.676-3.055 1.76-.093 1.46.966.43 2.173 2.473.262 1.746 1.072 1.28 1.917-.514 2.532-1.227.916-.448 2.264.8 1.43 2.934-1.09 1.03 2.218 4.162.152 1.5 1.616 3.587 1.344-.57 4.397 1.987 2.934-1.245 1.855.198 1.885 1.68.82-1.2 2.097-2.875-1.832-.4.92 2.426 1.257 5.75-.794 2.62 5.144-42.17 8.393-9.13 1.478-8.014 1.058-8.238.866-23.313 3.124 5.99-2.95.544-1.73 2.154-.877-.053-1.318 1.582-1.216-.16-1.137 3.94-2.8 3.842-4.627-.01 1.245 1.957 2.28 2.148.92 1.444-.303 1.914-2.288 1.822 1.294 2.845-1.28 4.78-3.683.588.818 1.8-1.63-.38-2.68.86-2.557 1.76-2.544.42-2.818 1.767-3.135.28-3.544 2.276 1.684 1.977.318.963-1.42 1.47-5.684 1.652 1.034 4.127-6.935zm37.492 14.538l1.68-.624-.938 2.813-1.36 1.223-.197 3.57-1.19 5.968-1.704 1.542-1.056-1.872.04-4.707L562 196.12z" fill="#73386e" stroke="#bebebe"/><path d="M122.713 34.035l-4.1 17.715-4.276 19.258-.432 1.148.75 2.828-.51 2.545-20.782-4.97-1.606.604-4.086-.688-4.71.138-2.837.774-3.07-.384-1.13-1.055-6.032.567-.073-1.03-2.962-1.652-2.8-.523-5.015 1.038-4.69-3.033.75-4.43-.424-1.983-1.68-2.096-.965-.114-1.682-.074-1.244-2.146-1.616-1.076-1.713.415L44.265 54l.967-1.823 1.594-.618-1.09-3.547 1.008-8.063-.486-1.248.606-5.725-1.247-2.665.508-4.4 1.903-2.442 1.523 1.903 3.38 2.97 2.692.727 2.466 1.492 2.723.05.846 1.59 2.283.58.686 3.553 1.228.1-.987 4.25-.397 4 1.07-.114-.028-3.533 1.172-3.105 2.51-2.807-.89-1.676.556-2.354-.215-2.823 1-1.72-.007-2.343-1.42-.742-.937-2.026.81-1.437zm-57.07-4.196l1.437-.258-1.033 2.802-1.21-1.522zm-1.805-4.714l1.582-1.548.758 2.647-.977 1.81-2.037-1.18z" fill="#2d6cab" stroke="#bebebe"/><path d="M500.335 166.978l2.22 13.51 11.598-1.972 1.21 7.616 1.968-1.764 1.758-2.897 1.556.22 1.802-2.58 3.49.44.125-1.692 1.845-.263.82-1.324 2.15 1.01 1.888-.363 2.078 3.858-.676 3.056-6.75-3.806.205 4.47-4.128 6.934-1.653-1.034-1.47 5.683-.963 1.42-1.976-.317-2.274-1.684-.28 3.545-1.77 3.136-.42 2.818-1.757 2.544-.863 2.557.382 2.68-1.802 1.63-.588-.818-4.78 3.683-2.844 1.28-1.822-1.293-1.915 2.288-1.445.303-2.148-.92-1.956-2.28.01-1.245-1.55-.02L487.15 214l-.814-1.622-2.14-1.93-1.784-2.647-.32-4.51 2.947-.756.154-2.012 1.25-1.01-.89-2.192 1.58-3.88 2.01 2.022.97-1.556-.566-1.657.99-3.054 1.306-.116.968-2.306 1.38.782 1.313-.87 3.593-5.47.16-5.59.94-3.808-.31-2.275-1.05-1.49z" fill="#6f0307" stroke="#bebebe"/><path d="M385.415 91.003l1.956.775 1.276 2.44 10.766 2.28 4.556 1.854 1.315-.59 4.514 1.1 1.34 1.76 2.302 1.596.11 2.6-.79 2.107 2.472.11-.783 2.192 1.73 1.4-.24 1.817-1.974.5-1.43 3.552-.433 2.406 1.243.304 1.478-1.68 1.466-3.07 2.074-1.33 1.372-3.884 2.09-1.012.01 1.96-1.316 1.92-2.36 6.43-.503 3.48.276 2.43-1.028.91-.695 3.417.598 2.814-.77 1.952-.89 4.748.607 3.637 1.578 3.145-.04 4.353-10.68.867-20.09 1.085-.878-1.834-3.945-1.507-.95-2.324-.525-3.328 1.203-1.86-1.662-1.388-.228-2.195-.67-1.682.173-2.378-2.2-3.16-1.712-.49-3.133-2.388-.606-1.932-3.308-1.495-1.16-1.585-2.204-.162-2.86-2.588.56-5.475-.314-2.51 1.12-2.317-1.375-1.822-1.2-.123.1-2.116 2.272-3.245 2.893-1.325.586-.916-.34-8.745 2.02-1.296.808.613 2.298.063 6.965-2.846 2.545-1.512.948 1-1.288 2.017 3.492 2.32z" fill="#73386e" stroke="#bebebe"/><path d="M191.706 106.484l32.92 4.002 19.356 1.918-2.455 29.58-2.527 29.76-18.536-1.657-24.158-2.846-12.43-1.56-21.957-3.268 2.362-14.797 5.82-36.45 1.175-7.727z" fill="#6f0307" stroke="#bebebe"/></svg>
